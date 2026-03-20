@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Replace index.html
         run: |
-          curl -L "https://gist.githubusercontent.com/Studentconnect785/0d3788bee8cc377023de84dcad6b4080/raw/ca68d5b4ad3031fe0d5d6f527c7c932bebe9a138/index.html" -o index.html
-          echo "File size: $(wc -c < index.html)"
+          curl -L "https://gist.githubusercontent.com/Studentconnect785/d625713328d8a33b71d3f7dacc45730d/raw/1cf4cb67440ad80c33a5afce3b2bfa8de78cd93f/index.html" -o index.html
+          echo "Lines: $(wc -l < index.html)"
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add index.html
