@@ -14,5 +14,5 @@ jobs:
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add index.html
-          git commit -m "Replace index.html with fixed version"
+          git commit -m "Fix index.html" || echo "Nothing to commit"
           git push
