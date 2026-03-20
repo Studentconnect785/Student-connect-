@@ -7,8 +7,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Fix opacity
         run: |
-          sed -i 's/opacity:0;transform:translateY(18px)/opacity:1;transform:translateY(0px)/g' index.html
-          echo "Done!"
+          sed -i 's/opacity:0/opacity:1/g' index.html
+          sed -i 's/translateY(18px)/translateY(0px)/g' index.html
+          git diff index.html
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
