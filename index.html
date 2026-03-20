@@ -6,38 +6,35 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>NEET Counselling Connect — Talk to Someone Living Your Dream</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:#FAFAF8;color:#1C2340;overflow-x:hidden}
 :root{--t:#00A89D;--n:#0D1B4B;--g:#F5A623;--l:#F4F7FB;--gr:#6B7280;--wh:#fff;--gn:#10B981}
-
-/* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #eee;padding:0}
 .nw{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
-.logo{font-size:1.2rem;font-weight:900;color:var(–n);text-decoration:none;display:flex;align-items:center;gap:8px}
-.logo span{color:var(–t)}
+.logo{font-size:1.2rem;font-weight:900;color:var(--n);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{color:var(--t)}
 .nav-btns{display:flex;gap:8px;align-items:center}
-.nbtn{font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.82rem;padding:9px 16px;border-radius:99px;border:none;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:5px}
-.nbtn-o{background:transparent;color:var(–t);border:1.5px solid var(–t)}
-.nbtn-o:hover{background:var(–t);color:#fff}
-.nbtn-f{background:var(–t);color:#fff;box-shadow:0 3px 12px rgba(0,168,157,.35)}
+.nbtn{font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:9px 16px;border-radius:99px;border:none;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:5px}
+.nbtn-o{background:transparent;color:var(--t);border:1.5px solid var(--t)}
+.nbtn-o:hover{background:var(--t);color:#fff}
+.nbtn-f{background:var(--t);color:#fff;box-shadow:0 3px 12px rgba(0,168,157,.35)}
 .nbtn-f:hover{background:#007A72;transform:translateY(-1px)}
-.nbtn-a{background:var(–n);color:#fff}
+.nbtn-a{background:var(--n);color:#fff}
 .nbtn-a:hover{background:#1a2f6b}
-
-/* ── HERO ── */
 #hero{background:linear-gradient(135deg,#0D1B4B 0%,#003D3A 100%);padding:65px 20px 55px;text-align:center;position:relative;overflow:hidden}
 .hb1{position:absolute;width:380px;height:380px;background:radial-gradient(circle,rgba(0,168,157,.22),transparent 70%);border-radius:50%;top:-100px;right:-100px;pointer-events:none}
 .hb2{position:absolute;width:240px;height:240px;background:radial-gradient(circle,rgba(245,166,35,.15),transparent 70%);border-radius:50%;bottom:-60px;left:-60px;pointer-events:none}
 .hero-em{font-size:3rem;margin-bottom:12px;display:block;animation:wav 2.5s ease-in-out infinite}
 @keyframes wav{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 #hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
-#hero h1 em{color:var(–g);font-style:normal;display:block}
+#hero h1 em{color:var(--g);font-style:normal;display:block}
 #hero p{color:rgba(255,255,255,.7);font-size:.97rem;line-height:1.7;max-width:500px;margin:0 auto 24px}
 .hbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.hbtn{display:inline-flex;align-items:center;gap:7px;font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.92rem;padding:13px 24px;border-radius:99px;border:none;cursor:pointer;text-decoration:none;transition:.2s}
-.hbtn-t{background:var(–t);color:#fff;box-shadow:0 4px 16px rgba(0,168,157,.4)}
+.hbtn{display:inline-flex;align-items:center;gap:7px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.92rem;padding:13px 24px;border-radius:99px;border:none;cursor:pointer;text-decoration:none;transition:.2s}
+.hbtn-t{background:var(--t);color:#fff;box-shadow:0 4px 16px rgba(0,168,157,.4)}
 .hbtn-t:hover{background:#007A72;transform:translateY(-2px)}
 .hbtn-g{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
 .hbtn-g:hover{background:rgba(255,255,255,.18)}
@@ -45,114 +42,102 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-
 .hbtn-w:hover{background:#1da855;transform:translateY(-2px)}
 .pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
 .pill{background:rgba(255,255,255,.1);color:rgba(255,255,255,.75);font-size:.76rem;font-weight:700;padding:5px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.15)}
-
-/* ── SECTIONS ── */
 .sec{padding:62px 20px}
 .wr{max-width:1080px;margin:0 auto}
-.lbl{display:inline-block;background:#E6F7F6;color:var(–t);font-weight:800;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:10px}
-h2.st{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(–n);line-height:1.2;margin-bottom:8px}
-p.ss{color:var(–gr);font-size:.95rem;line-height:1.65;max-width:510px}
+.lbl{display:inline-block;background:#E6F7F6;color:var(--t);font-weight:800;font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:10px}
+h2.st{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--n);line-height:1.2;margin-bottom:8px}
+p.ss{color:var(--gr);font-size:.95rem;line-height:1.65;max-width:510px}
 .ctr{text-align:center}.ctr .ss{margin:0 auto}
-
-/* ── HOW IT WORKS ── */
-#how{background:var(–l)}
+#how{background:var(--l)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
 .step{background:#fff;border-radius:16px;padding:20px 14px;text-align:center;box-shadow:0 2px 14px rgba(13,27,75,.07);transition:.25s}
 .step:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(13,27,75,.12)}
 .step-i{font-size:1.8rem;margin-bottom:8px}
 .step-n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;font-weight:900;font-size:.8rem;color:#fff;margin-bottom:8px}
-.step h3{font-size:.9rem;font-weight:800;color:var(–n);margin-bottom:5px}
-.step p{font-size:.78rem;color:var(–gr);line-height:1.55}
+.step h3{font-size:.9rem;font-weight:800;color:var(--n);margin-bottom:5px}
+.step p{font-size:.78rem;color:var(--gr);line-height:1.55}
 @media(max-width:680px){.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:400px){.steps{grid-template-columns:1fr}}
-
-/* ── SENIOR CARDS ── */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 2px 14px rgba(13,27,75,.07);transition:.25s}
 .card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(13,27,75,.12)}
 .ct{padding:16px 16px 10px;display:flex;gap:10px;align-items:flex-start}
 .av{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-.cn{font-weight:800;font-size:.9rem;color:var(–n)}
-.cc{font-size:.74rem;color:var(–t);font-weight:700;margin-top:1px}
-.cy{font-size:.71rem;color:var(–gr);margin-top:1px}
+.cn{font-weight:800;font-size:.9rem;color:var(--n)}
+.cc{font-size:.74rem;color:var(--t);font-weight:700;margin-top:1px}
+.cy{font-size:.71rem;color:var(--gr);margin-top:1px}
 .cb{padding:0 16px 12px}
-.cq{font-style:italic;font-size:.78rem;color:var(–gr);line-height:1.5;background:var(–l);border-radius:8px;padding:8px 10px;margin-bottom:10px}
+.cq{font-style:italic;font-size:.78rem;color:var(--gr);line-height:1.5;background:var(--l);border-radius:8px;padding:8px 10px;margin-bottom:10px}
 .cm{display:flex;justify-content:space-between;align-items:center}
-.cr{font-weight:900;color:var(–t);font-size:.86rem}
-.crt{font-weight:700;font-size:.8rem;color:var(–n)}
-.cf{padding:10px 16px;background:var(–l);display:flex;gap:7px}
-.cf a,.cf button{flex:1;text-align:center;font-weight:800;font-size:.76rem;padding:8px;border-radius:8px;text-decoration:none;transition:.2s;cursor:pointer;font-family:‘Nunito’,sans-serif;border:none}
-.cf1{border:1.5px solid var(–t);color:var(–t);background:transparent}
-.cf1:hover{background:var(–t);color:#fff}
-.cf2{background:var(–t);color:#fff}
+.cr{font-weight:900;color:var(--t);font-size:.86rem}
+.crt{font-weight:700;font-size:.8rem;color:var(--n)}
+.cf{padding:10px 16px;background:var(--l);display:flex;gap:7px}
+.cf a,.cf button{flex:1;text-align:center;font-weight:800;font-size:.76rem;padding:8px;border-radius:8px;text-decoration:none;transition:.2s;cursor:pointer;font-family:'Nunito',sans-serif;border:none}
+.cf1{border:1.5px solid var(--t);color:var(--t);background:transparent}
+.cf1:hover{background:var(--t);color:#fff}
+.cf2{background:var(--t);color:#fff}
 .cf2:hover{background:#007A72}
 .cf3{background:#25D366;color:#fff}
 .cf3:hover{background:#1da855}
 @media(max-width:780px){.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}}
-
-/* ── STATS ── */
-#stats{background:var(–n);padding:38px 20px}
+#stats{background:var(--n);padding:38px 20px}
 .sr{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{text-align:center;padding:8px 14px;border-right:1px solid rgba(255,255,255,.1)}
 .stat:last-child{border:none}
 .sn{font-size:1.8rem;font-weight:900;color:#fff;line-height:1}
-.sn em{color:var(–t);font-style:normal}
+.sn em{color:var(--t);font-style:normal}
 .sl{font-size:.74rem;color:rgba(255,255,255,.5);margin-top:3px}
 @media(max-width:560px){.sr{grid-template-columns:1fr 1fr}}
-
-/* ── PRICING ── */
-#pricing{background:var(–l)}
+#pricing{background:var(--l)}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px;align-items:start}
 .plan{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:0 2px 14px rgba(13,27,75,.07);position:relative;transition:.25s}
 .plan:hover{transform:translateY(-3px)}
-.plan.hot{background:var(–n);transform:scale(1.03)}
+.plan.hot{background:var(--n);transform:scale(1.03)}
 .plan.hot:hover{transform:scale(1.03) translateY(-3px)}
-.hb3{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(–g);color:var(–n);font-weight:900;font-size:.7rem;padding:3px 12px;border-radius:99px;white-space:nowrap}
-.pn{font-weight:900;font-size:.95rem;color:var(–n);margin-bottom:2px}
+.hb3{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--g);color:var(--n);font-weight:900;font-size:.7rem;padding:3px 12px;border-radius:99px;white-space:nowrap}
+.pn{font-weight:900;font-size:.95rem;color:var(--n);margin-bottom:2px}
 .plan.hot .pn{color:#fff}
-.pd{font-size:.78rem;color:var(–gr);margin-bottom:14px}
+.pd{font-size:.78rem;color:var(--gr);margin-bottom:14px}
 .plan.hot .pd{color:rgba(255,255,255,.5)}
-.pp{font-weight:900;font-size:2.1rem;color:var(–n);line-height:1;margin-bottom:2px}
+.pp{font-weight:900;font-size:2.1rem;color:var(--n);line-height:1;margin-bottom:2px}
 .plan.hot .pp{color:#fff}
-.pp span{font-size:.82rem;font-weight:600;color:var(–gr)}
+.pp span{font-size:.82rem;font-weight:600;color:var(--gr)}
 .plan.hot .pp span{color:rgba(255,255,255,.45)}
-.pdur{font-size:.76rem;color:var(–gr);margin-bottom:16px}
+.pdur{font-size:.76rem;color:var(--gr);margin-bottom:16px}
 .plan.hot .pdur{color:rgba(255,255,255,.45)}
 .pf{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
 .pf li{font-size:.82rem;color:#374151;display:flex;gap:6px;align-items:flex-start}
-.pf li::before{content:‘✓’;color:var(–t);font-weight:900;flex-shrink:0}
+.pf li::before{content:'✓';color:var(--t);font-weight:900;flex-shrink:0}
 .plan.hot .pf li{color:rgba(255,255,255,.8)}
 .plan.hot .pf li::before{color:#7FDED8}
-.pbtn{width:100%;font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.86rem;padding:11px;border-radius:10px;border:none;cursor:pointer;transition:.2s}
-.pb1{background:transparent;border:2px solid var(–t);color:var(–t)}
-.pb1:hover{background:var(–t);color:#fff}
-.pb2{background:var(–t);color:#fff}
+.pbtn{width:100%;font-family:'Nunito',sans-serif;font-weight:800;font-size:.86rem;padding:11px;border-radius:10px;border:none;cursor:pointer;transition:.2s}
+.pb1{background:transparent;border:2px solid var(--t);color:var(--t)}
+.pb1:hover{background:var(--t);color:#fff}
+.pb2{background:var(--t);color:#fff}
 .pb2:hover{background:#007A72}
-.pb3{background:var(–n);color:#fff}
+.pb3{background:var(--n);color:#fff}
 .pb3:hover{background:#1a2f6b}
 @media(max-width:780px){.plans{grid-template-columns:1fr}.plan.hot{transform:none}}
-
-/* ── RANK PREDICTOR ── */
 #predictor{background:linear-gradient(135deg,#0D1B4B 0%,#003D3A 100%);padding:62px 20px;position:relative;overflow:hidden}
-#predictor::before{content:’’;position:absolute;width:350px;height:350px;background:radial-gradient(circle,rgba(0,168,157,.18),transparent 70%);border-radius:50%;top:-80px;right:-80px;pointer-events:none}
-#predictor::after{content:’’;position:absolute;width:220px;height:220px;background:radial-gradient(circle,rgba(245,166,35,.12),transparent 70%);border-radius:50%;bottom:-60px;left:-40px;pointer-events:none}
+#predictor::before{content:'';position:absolute;width:350px;height:350px;background:radial-gradient(circle,rgba(0,168,157,.18),transparent 70%);border-radius:50%;top:-80px;right:-80px;pointer-events:none}
+#predictor::after{content:'';position:absolute;width:220px;height:220px;background:radial-gradient(circle,rgba(245,166,35,.12),transparent 70%);border-radius:50%;bottom:-60px;left:-40px;pointer-events:none}
 .rp{max-width:700px;margin:0 auto;position:relative;z-index:2}
 .rp-lbl{display:inline-block;background:rgba(0,168,157,.2);border:1px solid rgba(0,168,157,.35);color:#7FDED8;font-weight:800;font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:12px}
 .rp h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;color:#fff;margin-bottom:8px}
 .rp p{color:rgba(255,255,255,.6);font-size:.93rem;line-height:1.65;margin-bottom:26px}
 .rp-card{background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:24px}
 .rp-sv{font-size:2rem;font-weight:900;color:#fff;text-align:right;margin-bottom:6px}
-.rp-sv em{color:var(–t);font-style:normal}
-.rp-sl{width:100%;-webkit-appearance:none;height:6px;border-radius:99px;outline:none;cursor:pointer;margin-bottom:18px;background:linear-gradient(to right,var(–t) 0%,var(–t) 55%,rgba(255,255,255,.2) 55%)}
-.rp-sl::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(–t),#007A72);cursor:pointer;box-shadow:0 2px 8px rgba(0,168,157,.5);border:2px solid #fff}
+.rp-sv em{color:var(--t);font-style:normal}
+.rp-sl{width:100%;-webkit-appearance:none;height:6px;border-radius:99px;outline:none;cursor:pointer;margin-bottom:18px;background:linear-gradient(to right,var(--t) 0%,var(--t) 55%,rgba(255,255,255,.2) 55%)}
+.rp-sl::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--t),#007A72);cursor:pointer;box-shadow:0 2px 8px rgba(0,168,157,.5);border:2px solid #fff}
 .rp-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
 .rp-fg{display:flex;flex-direction:column;gap:5px}
 .rp-fg label{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.62)}
-.rp-fg select{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.15);border-radius:9px;padding:10px 12px;color:#fff;font-family:‘Nunito’,sans-serif;font-size:.88rem;outline:none;transition:.2s;width:100%}
+.rp-fg select{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.15);border-radius:9px;padding:10px 12px;color:#fff;font-family:'Nunito',sans-serif;font-size:.88rem;outline:none;transition:.2s;width:100%}
 .rp-fg select option{background:#0D1B4B}
-.rp-fg select:focus{border-color:var(–t)}
-.rp-btn{width:100%;background:linear-gradient(135deg,var(–t),#007A72);color:#fff;font-family:‘Nunito’,sans-serif;font-weight:900;font-size:.97rem;padding:13px;border-radius:11px;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 14px rgba(0,168,157,.35)}
+.rp-fg select:focus{border-color:var(--t)}
+.rp-btn{width:100%;background:linear-gradient(135deg,var(--t),#007A72);color:#fff;font-family:'Nunito',sans-serif;font-weight:900;font-size:.97rem;padding:13px;border-radius:11px;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 14px rgba(0,168,157,.35)}
 .rp-btn:hover{transform:translateY(-2px)}
 .rp-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .rp-res{margin-top:20px}
@@ -160,62 +145,54 @@ p.ss{color:var(–gr);font-size:.95rem;line-height:1.65;max-width:510px}
 .rp-rc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px;text-align:center}
 .rp-rc.hl{background:rgba(0,168,157,.18);border-color:rgba(0,168,157,.4)}
 .rp-rn{font-size:1.4rem;font-weight:900;color:#fff;line-height:1;margin-bottom:3px}
-.rp-rn em{color:var(–t);font-style:normal}
+.rp-rn em{color:var(--t);font-style:normal}
 .rp-rl{font-size:.68rem;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .rp-ai{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px}
 .rp-ai-h{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.rp-dot{width:7px;height:7px;border-radius:50%;background:var(–t);animation:rpulse 1.4s ease-in-out infinite}
+.rp-dot{width:7px;height:7px;border-radius:50%;background:var(--t);animation:rpulse 1.4s ease-in-out infinite}
 @keyframes rpulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
 .rp-ai-lbl{font-size:.8rem;font-weight:800;color:#7FDED8}
 .rp-ai-txt{font-size:.86rem;color:rgba(255,255,255,.82);line-height:1.65;white-space:pre-wrap}
 .rp-dots{display:flex;gap:4px;align-items:center}
-.rp-d{width:6px;height:6px;border-radius:50%;background:var(–t);animation:rpdots 1.1s ease-in-out infinite}
+.rp-d{width:6px;height:6px;border-radius:50%;background:var(--t);animation:rpdots 1.1s ease-in-out infinite}
 .rp-d:nth-child(2){animation-delay:.16s}
 .rp-d:nth-child(3){animation-delay:.32s}
 @keyframes rpdots{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-5px);opacity:1}}
 .rp-acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
-.rp-act{display:inline-flex;align-items:center;gap:6px;font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.85rem;padding:10px 20px;border-radius:99px;border:none;cursor:pointer;transition:.2s;text-decoration:none}
-.rpa-g{background:var(–g);color:var(–n);box-shadow:0 4px 12px rgba(245,166,35,.35)}
+.rp-act{display:inline-flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;padding:10px 20px;border-radius:99px;border:none;cursor:pointer;transition:.2s;text-decoration:none}
+.rpa-g{background:var(--g);color:var(--n);box-shadow:0 4px 12px rgba(245,166,35,.35)}
 .rpa-g:hover{transform:translateY(-2px)}
 .rpa-gh{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}
 .rpa-gh:hover{background:rgba(255,255,255,.18)}
-
-/* ── SIGNUP ── */
 #signup{background:linear-gradient(135deg,#0D1B4B,#003D3A);padding:62px 20px;position:relative;overflow:hidden}
-#signup::before{content:’’;position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(0,168,157,.2),transparent 70%);border-radius:50%;right:-60px;bottom:-60px;pointer-events:none}
+#signup::before{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(0,168,157,.2),transparent 70%);border-radius:50%;right:-60px;bottom:-60px;pointer-events:none}
 .si{max-width:480px;margin:0 auto;text-align:center;position:relative;z-index:2}
 .si h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;color:#fff;margin-bottom:8px}
 .si>p{color:rgba(255,255,255,.6);font-size:.93rem;line-height:1.65;margin-bottom:26px}
 .tabs{display:flex;background:rgba(0,0,0,.25);border-radius:9px;padding:4px;margin-bottom:18px}
-.tab{flex:1;padding:9px;font-family:‘Nunito’,sans-serif;font-weight:700;font-size:.84rem;color:rgba(255,255,255,.5);border-radius:6px;cursor:pointer;border:none;background:transparent;transition:.2s}
-.tab.on{background:var(–t);color:#fff}
+.tab{flex:1;padding:9px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.84rem;color:rgba(255,255,255,.5);border-radius:6px;cursor:pointer;border:none;background:transparent;transition:.2s}
+.tab.on{background:var(--t);color:#fff}
 .fg{margin-bottom:11px;text-align:left}
 .fg label{display:block;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.62);margin-bottom:4px}
-.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.14);border-radius:9px;padding:10px 12px;color:#fff;font-family:‘Nunito’,sans-serif;font-size:.88rem;outline:none;transition:.2s}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.14);border-radius:9px;padding:10px 12px;color:#fff;font-family:'Nunito',sans-serif;font-size:.88rem;outline:none;transition:.2s}
 .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
 .fg select option{background:#0D1B4B}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(–t);box-shadow:0 0 0 3px rgba(0,168,157,.18)}
-.fsub{width:100%;margin-top:4px;font-family:‘Nunito’,sans-serif;font-weight:900;font-size:.95rem;padding:13px;border-radius:10px;border:none;cursor:pointer;background:var(–t);color:#fff;transition:.2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--t);box-shadow:0 0 0 3px rgba(0,168,157,.18)}
+.fsub{width:100%;margin-top:4px;font-family:'Nunito',sans-serif;font-weight:900;font-size:.95rem;padding:13px;border-radius:10px;border:none;cursor:pointer;background:var(--t);color:#fff;transition:.2s}
 .fsub:hover{background:#007A72}
 .fnote{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:8px}
-
-/* ── FOOTER ── */
 footer{background:#0A1640;padding:28px 20px;text-align:center}
 .flogo{font-size:1rem;font-weight:900;color:#fff;margin-bottom:7px}
-.flogo span{color:var(–t)}
+.flogo span{color:var(--t)}
 .flinks{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:10px 0}
 .flinks a{font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none;transition:.2s}
-.flinks a:hover{color:var(–t)}
+.flinks a:hover{color:var(--t)}
 footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
-
-/* ── FLOAT BUTTONS ── */
-.float-wa{position:fixed;bottom:90px;right:22px;background:#25D366;color:#fff;font-family:‘Nunito’,sans-serif;font-weight:900;font-size:.82rem;padding:11px 18px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 5px 18px rgba(37,211,102,.45);z-index:50;display:flex;align-items:center;gap:6px;transition:.2s;animation:bob 3s ease-in-out infinite}
+.float-wa{position:fixed;bottom:90px;right:22px;background:#25D366;color:#fff;font-family:'Nunito',sans-serif;font-weight:900;font-size:.82rem;padding:11px 18px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 5px 18px rgba(37,211,102,.45);z-index:50;display:flex;align-items:center;gap:6px;transition:.2s;animation:bob 3s ease-in-out infinite}
 .float-wa:hover{background:#1da855;animation:none;transform:translateY(-2px)}
-.float-sr{position:fixed;bottom:28px;right:22px;background:var(–t);color:#fff;font-family:‘Nunito’,sans-serif;font-weight:900;font-size:.82rem;padding:11px 18px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 5px 18px rgba(0,168,157,.45);z-index:50;display:flex;align-items:center;gap:6px;transition:.2s;animation:bob 3s ease-in-out infinite 1.5s}
+.float-sr{position:fixed;bottom:28px;right:22px;background:var(--t);color:#fff;font-family:'Nunito',sans-serif;font-weight:900;font-size:.82rem;padding:11px 18px;border-radius:99px;border:none;cursor:pointer;box-shadow:0 5px 18px rgba(0,168,157,.45);z-index:50;display:flex;align-items:center;gap:6px;transition:.2s;animation:bob 3s ease-in-out infinite 1.5s}
 .float-sr:hover{background:#007A72;animation:none;transform:translateY(-2px)}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-
-/* ── HOSTELBOT ── */
 #hb-bbl{position:fixed;bottom:155px;right:22px;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#0D1B4B,#003D3A);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 5px 20px rgba(13,27,75,.4);z-index:10000;transition:transform .2s;animation:hbpls 3s ease-in-out infinite}
 #hb-bbl:hover{transform:scale(1.1);animation:none}
 @keyframes hbpls{0%,100%{box-shadow:0 5px 20px rgba(13,27,75,.4)}50%{box-shadow:0 5px 28px rgba(0,168,157,.5),0 0 0 7px rgba(0,168,157,.1)}}
@@ -230,31 +207,29 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 .hb-x:hover{background:rgba(255,255,255,.22)}
 .hb-msgs{flex:1;overflow-y:auto;padding:12px 12px 5px;display:flex;flex-direction:column;gap:9px;background:#F8FAFB}
 .hb-msgs::-webkit-scrollbar{width:3px}
-.hb-msgs::-webkit-scrollbar-thumb{background:var(–t);border-radius:3px}
+.hb-msgs::-webkit-scrollbar-thumb{background:var(--t);border-radius:3px}
 .hb-rw{display:flex;align-items:flex-end;gap:5px}
 .hb-rw.u{justify-content:flex-end}
 .hb-mav{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;margin-bottom:1px}
 .hb-bub{max-width:82%;padding:8px 11px;font-size:12px;line-height:1.6;white-space:pre-wrap;word-break:break-word;border-radius:12px}
 .hb-bub.bot{background:#fff;color:#1C2340;border-radius:12px 12px 12px 3px;box-shadow:0 2px 7px rgba(0,0,0,.07)}
-.hb-bub.usr{background:linear-gradient(135deg,var(–t),#007A72);color:#fff;border-radius:12px 12px 3px 12px;box-shadow:0 2px 10px rgba(0,168,157,.28)}
+.hb-bub.usr{background:linear-gradient(135deg,var(--t),#007A72);color:#fff;border-radius:12px 12px 3px 12px;box-shadow:0 2px 10px rgba(0,168,157,.28)}
 .hb-dt{display:flex;gap:3px;align-items:center;padding:9px 12px;background:#fff;border-radius:12px 12px 12px 3px;box-shadow:0 2px 7px rgba(0,0,0,.07)}
-.hb-d{width:5px;height:5px;border-radius:50%;background:var(–t);animation:hbdot 1.1s ease-in-out infinite}
+.hb-d{width:5px;height:5px;border-radius:50%;background:var(--t);animation:hbdot 1.1s ease-in-out infinite}
 .hb-d:nth-child(2){animation-delay:.16s}
 .hb-d:nth-child(3){animation-delay:.32s}
 @keyframes hbdot{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-4px);opacity:1}}
 .hb-chips{margin-top:3px}
 .hb-cl{font-size:9px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
 .hb-cw{display:flex;flex-wrap:wrap;gap:5px}
-.hb-chip{background:#fff;border:1.5px solid #E5E7EB;border-radius:99px;padding:4px 9px;font-size:10px;font-weight:700;color:#0D1B4B;cursor:pointer;font-family:‘Nunito’,sans-serif;transition:.15s}
-.hb-chip:hover{border-color:var(–t);color:var(–t);background:#E6F7F6}
+.hb-chip{background:#fff;border:1.5px solid #E5E7EB;border-radius:99px;padding:4px 9px;font-size:10px;font-weight:700;color:#0D1B4B;cursor:pointer;font-family:'Nunito',sans-serif;transition:.15s}
+.hb-chip:hover{border-color:var(--t);color:var(--t);background:#E6F7F6}
 .hb-ir{padding:8px 10px 10px;background:#fff;border-top:1px solid #F0F0F0;display:flex;gap:6px;align-items:flex-end;flex-shrink:0}
-#hb-in{flex:1;border:1.5px solid #E5E7EB;border-radius:10px;padding:8px 10px;font-size:12px;font-family:‘Nunito’,sans-serif;resize:none;outline:none;line-height:1.5;color:#1C2340;background:#F8FAFB;max-height:60px;overflow-y:auto;transition:border .18s}
-#hb-in:focus{border-color:var(–t)}
-#hb-sd{width:34px;height:34px;border-radius:9px;border:none;background:linear-gradient(135deg,var(–t),#007A72);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,168,157,.3);transition:.18s}
+#hb-in{flex:1;border:1.5px solid #E5E7EB;border-radius:10px;padding:8px 10px;font-size:12px;font-family:'Nunito',sans-serif;resize:none;outline:none;line-height:1.5;color:#1C2340;background:#F8FAFB;max-height:60px;overflow-y:auto;transition:border .18s}
+#hb-in:focus{border-color:var(--t)}
+#hb-sd{width:34px;height:34px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--t),#007A72);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,168,157,.3);transition:.18s}
 #hb-sd:disabled{background:#E5E7EB;box-shadow:none;cursor:not-allowed}
 .hb-ft{text-align:center;font-size:9px;color:#9CA3AF;padding-bottom:6px}
-
-/* ── SENIOR PROFILES MODAL ── */
 #sp-modal{position:fixed;inset:0;z-index:99999;background:rgba(13,27,75,.93);display:flex;flex-direction:column;overflow-y:auto;animation:mfade .3s ease}
 @keyframes mfade{from{opacity:0}to{opacity:1}}
 .sp-hd{background:linear-gradient(135deg,#0D1B4B,#003D3A);padding:18px 20px;flex-shrink:0;position:sticky;top:0;z-index:2}
@@ -262,927 +237,681 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 .sp-grid{max-width:900px;margin:0 auto;padding:20px 16px;width:100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
 .sp-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 16px rgba(13,27,75,.12);transition:.25s;animation:mfade .4s ease both}
 .sp-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(13,27,75,.2)}
-.sp-ft{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.5)}
-.sp-back{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.82rem;padding:9px 16px;border-radius:99px;cursor:pointer;transition:.2s;white-space:nowrap;flex-shrink:0}
+.sp-back{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:9px 16px;border-radius:99px;cursor:pointer;transition:.2s;white-space:nowrap;flex-shrink:0}
 .sp-back:hover{background:rgba(255,255,255,.22)}
 .sp-bot{background:rgba(0,0,0,.3);padding:18px 20px;text-align:center;flex-shrink:0}
-
-/* ── ADMIN PANEL ── */
 #admin-modal{position:fixed;inset:0;z-index:99998;background:rgba(13,27,75,.95);display:none;flex-direction:column;overflow-y:auto}
 #admin-modal.show{display:flex}
 .adm-hd{background:#0D1B4B;padding:16px 20px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1)}
 .adm-body{flex:1;max-width:1100px;margin:0 auto;padding:24px 16px;width:100%}
 .adm-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
-.adm-tab{font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.85rem;padding:9px 18px;border-radius:99px;border:none;cursor:pointer;transition:.2s}
-.adm-tab.on{background:var(–t);color:#fff}
+.adm-tab{font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;padding:9px 18px;border-radius:99px;border:none;cursor:pointer;transition:.2s}
+.adm-tab.on{background:var(--t);color:#fff}
 .adm-tab:not(.on){background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)}
 .adm-table{width:100%;border-collapse:collapse;font-size:.82rem}
 .adm-table th{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-weight:700;padding:10px 12px;text-align:left;font-size:.74rem;text-transform:uppercase;letter-spacing:.04em}
 .adm-table td{color:rgba(255,255,255,.85);padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top}
 .adm-table tr:hover td{background:rgba(255,255,255,.04)}
 .adm-empty{text-align:center;padding:40px;color:rgba(255,255,255,.4);font-size:.9rem}
-.adm-wa{background:#25D366;color:#fff;border:none;font-family:‘Nunito’,sans-serif;font-weight:800;font-size:.72rem;padding:5px 10px;border-radius:99px;cursor:pointer;transition:.2s}
+.adm-wa{background:#25D366;color:#fff;border:none;font-family:'Nunito',sans-serif;font-weight:800;font-size:.72rem;padding:5px 10px;border-radius:99px;cursor:pointer;transition:.2s}
 .adm-wa:hover{background:#1da855}
 .adm-stat{background:rgba(255,255,255,.07);border-radius:12px;padding:16px;text-align:center}
 .adm-stat .n{font-size:1.8rem;font-weight:900;color:#fff;line-height:1}
-.adm-stat .n em{color:var(–t);font-style:normal}
+.adm-stat .n em{color:var(--t);font-style:normal}
 .adm-stat .l{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:4px}
 .adm-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
-
-/* ── LOGIN MODAL ── */
 #login-modal{position:fixed;inset:0;z-index:99997;background:rgba(13,27,75,.95);display:none;align-items:center;justify-content:center}
 #login-modal.show{display:flex}
 .login-box{background:#fff;border-radius:20px;padding:36px 32px;max-width:360px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.login-box h3{font-size:1.2rem;font-weight:900;color:var(–n);margin-bottom:6px}
-.login-box p{font-size:.84rem;color:var(–gr);margin-bottom:22px}
-.login-inp{width:100%;border:1.5px solid #E5E7EB;border-radius:10px;padding:12px 14px;font-family:‘Nunito’,sans-serif;font-size:.9rem;outline:none;transition:.2s;margin-bottom:12px;color:#1C2340}
-.login-inp:focus{border-color:var(–t)}
-.login-btn{width:100%;font-family:‘Nunito’,sans-serif;font-weight:900;font-size:.95rem;padding:13px;border-radius:10px;border:none;cursor:pointer;background:var(–n);color:#fff;transition:.2s;margin-bottom:10px}
+.login-box h3{font-size:1.2rem;font-weight:900;color:var(--n);margin-bottom:6px}
+.login-box p{font-size:.84rem;color:var(--gr);margin-bottom:22px}
+.login-inp{width:100%;border:1.5px solid #E5E7EB;border-radius:10px;padding:12px 14px;font-family:'Nunito',sans-serif;font-size:.9rem;outline:none;transition:.2s;margin-bottom:12px;color:#1C2340}
+.login-inp:focus{border-color:var(--t)}
+.login-btn{width:100%;font-family:'Nunito',sans-serif;font-weight:900;font-size:.95rem;padding:13px;border-radius:10px;border:none;cursor:pointer;background:var(--n);color:#fff;transition:.2s;margin-bottom:10px}
 .login-btn:hover{background:#1a2f6b}
 .login-err{color:#EF4444;font-size:.78rem;display:none;margin-bottom:8px}
-.login-cancel{background:none;border:none;font-family:‘Nunito’,sans-serif;font-weight:700;font-size:.82rem;color:var(–gr);cursor:pointer}
-.login-cancel:hover{color:var(–n)}
-
-/* ── FADE IN ── */
+.login-cancel{background:none;border:none;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;color:var(--gr);cursor:pointer}
+.login-cancel:hover{color:var(--n)}
 .fi{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
 .fi.in{opacity:1;transform:none}
 </style>
 
 </head>
 <body>
-
-<!-- ═══ NAV ═══ -->
-
 <nav>
-  <div class="nw">
-    <a href="#" class="logo">🏥 NEET<span>Connect</span></a>
-    <div class="nav-btns">
-      <a href="#predictor" class="nbtn nbtn-o" style="display:none" id="nav-rp">🎯 Rank</a>
-      <button class="nbtn nbtn-a" onclick="showLogin()">⚙️ Admin</button>
-      <a href="#signup" class="nbtn nbtn-f">Get Started ✨</a>
-    </div>
-  </div>
+<div class="nw">
+<a href="#" class="logo">🏥 NEET<span>Connect</span></a>
+<div class="nav-btns">
+<a href="#predictor" class="nbtn nbtn-o" style="display:none" id="nav-rp">🎯 Rank</a>
+<button class="nbtn nbtn-a" onclick="showLogin()">⚙️ Admin</button>
+<a href="#signup" class="nbtn nbtn-f">Get Started ✨</a>
+</div>
+</div>
 </nav>
-
-<!-- ═══ HERO ═══ -->
-
 <section id="hero">
-  <div class="hb1"></div><div class="hb2"></div>
-  <span class="hero-em">👋</span>
-  <h1>Confused about NEET counselling?<br/><em>Talk to a senior who's been there.</em></h1>
-  <p>Connect with verified MBBS students at your dream college. Honest answers about counselling, hostel life & more. Starting at just ₹99.</p>
-  <div class="hbtns">
-    <button class="hbtn hbtn-t" onclick="scrollTo('#signup')">🔍 Find a Senior</button>
-    <a class="hbtn hbtn-w" href="https://wa.me/919999000000?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Counselling%20Connect" target="_blank">💬 WhatsApp Us</a>
-    <button class="hbtn hbtn-g" onclick="scrollTo('#signup');setTimeout(()=>swTab('s'),400)">🎓 Join as Senior</button>
-  </div>
-  <div class="pills">
-    <div class="pill">✅ 250+ Verified Seniors</div>
-    <div class="pill">🏥 80+ Colleges</div>
-    <div class="pill">⭐ 4.8 Rated</div>
-    <div class="pill">💸 From ₹99 only</div>
-    <div class="pill">🤖 AI Chatbot 24/7</div>
-  </div>
+<div class="hb1"></div><div class="hb2"></div>
+<span class="hero-em">👋</span>
+<h1>Confused about NEET counselling?<br/><em>Talk to a senior who's been there.</em></h1>
+<p>Connect with verified MBBS students at your dream college. Honest answers about counselling, hostel life & more. Starting at just ₹99.</p>
+<div class="hbtns">
+<button class="hbtn hbtn-t" onclick="scrollTo('#signup')">🔍 Find a Senior</button>
+<a class="hbtn hbtn-w" href="https://wa.me/919999000000?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Counselling%20Connect" target="_blank">💬 WhatsApp Us</a>
+<button class="hbtn hbtn-g" onclick="scrollTo('#signup');setTimeout(()=>swTab('s'),400)">🎓 Join as Senior</button>
+</div>
+<div class="pills">
+<div class="pill">✅ 250+ Verified Seniors</div>
+<div class="pill">🏥 80+ Colleges</div>
+<div class="pill">⭐ 4.8 Rated</div>
+<div class="pill">💸 From ₹99 only</div>
+<div class="pill">🤖 AI Chatbot 24/7</div>
+</div>
 </section>
-
-<!-- ═══ HOW IT WORKS ═══ -->
-
 <section id="how" class="sec">
-  <div class="wr ctr">
-    <div class="fi">
-      <span class="lbl">Super Simple</span>
-      <h2 class="st">How it works 👇</h2>
-      <p class="ss">From zero to your first session in under 3 minutes.</p>
-    </div>
-    <div class="steps">
-      <div class="step fi"><div class="step-i">🔍</div><div class="step-n" style="background:var(--t)">1</div><h3>Search a College</h3><p>Type your target college — see verified seniors studying there right now.</p></div>
-      <div class="step fi"><div class="step-i">👤</div><div class="step-n" style="background:var(--n)">2</div><h3>Pick a Senior</h3><p>Browse profiles, read their stories and pick someone you trust.</p></div>
-      <div class="step fi"><div class="step-i">💳</div><div class="step-n" style="background:var(--g)">3</div><h3>Pay ₹99–₹499</h3><p>Secure UPI or card. Full refund if the session doesn't happen.</p></div>
-      <div class="step fi"><div class="step-i">💬</div><div class="step-n" style="background:#8B5CF6">4</div><h3>Talk & Learn</h3><p>WhatsApp or video call. Get honest answers to everything!</p></div>
-    </div>
-  </div>
+<div class="wr ctr">
+<div class="fi">
+<span class="lbl">Super Simple</span>
+<h2 class="st">How it works 👇</h2>
+<p class="ss">From zero to your first session in under 3 minutes.</p>
+</div>
+<div class="steps">
+<div class="step fi"><div class="step-i">🔍</div><div class="step-n" style="background:var(--t)">1</div><h3>Search a College</h3><p>Type your target college — see verified seniors studying there right now.</p></div>
+<div class="step fi"><div class="step-i">👤</div><div class="step-n" style="background:var(--n)">2</div><h3>Pick a Senior</h3><p>Browse profiles, read their stories and pick someone you trust.</p></div>
+<div class="step fi"><div class="step-i">💳</div><div class="step-n" style="background:var(--g)">3</div><h3>Pay ₹99–₹499</h3><p>Secure UPI or card. Full refund if the session doesn't happen.</p></div>
+<div class="step fi"><div class="step-i">💬</div><div class="step-n" style="background:#8B5CF6">4</div><h3>Talk & Learn</h3><p>WhatsApp or video call. Get honest answers to everything!</p></div>
+</div>
+</div>
 </section>
-
-<!-- ═══ SENIORS ═══ -->
-
 <section id="seniors" class="sec" style="background:#fff;padding-top:52px;padding-bottom:60px">
-  <div class="wr">
-    <div class="fi ctr">
-      <span class="lbl">Our Seniors</span>
-      <h2 class="st">Meet your mentors 👩‍⚕️👨‍⚕️</h2>
-      <p class="ss" style="margin:0 auto">Real students. Real stories. No scripts.</p>
-    </div>
-    <div class="cards" id="senior-cards"></div>
-    <p style="text-align:center;margin-top:18px;font-size:.84rem;color:var(--gr)">+ 244 more seniors across 80 colleges 👉 <a href="#signup" style="color:var(--t);font-weight:700">Sign up to see all</a></p>
-  </div>
+<div class="wr">
+<div class="fi ctr">
+<span class="lbl">Our Seniors</span>
+<h2 class="st">Meet your mentors 👩‍⚕️👨‍⚕️</h2>
+<p class="ss" style="margin:0 auto">Real students. Real stories. No scripts.</p>
+</div>
+<div class="cards" id="senior-cards"></div>
+<p style="text-align:center;margin-top:18px;font-size:.84rem;color:var(--gr)">+ 244 more seniors across 80 colleges 👉 <a href="#signup" style="color:var(--t);font-weight:700">Sign up to see all</a></p>
+</div>
 </section>
-
-<!-- ═══ STATS ═══ -->
-
 <section id="stats">
-  <div class="sr">
-    <div class="stat fi"><div class="sn">250<em>+</em></div><div class="sl">Verified Seniors</div></div>
-    <div class="stat fi"><div class="sn">80<em>+</em></div><div class="sl">Medical Colleges</div></div>
-    <div class="stat fi"><div class="sn">4.8<em>★</em></div><div class="sl">Avg Session Rating</div></div>
-    <div class="stat fi"><div class="sn">₹<em>199</em></div><div class="sl">vs ₹5,000 consultants</div></div>
-  </div>
+<div class="sr">
+<div class="stat fi"><div class="sn">250<em>+</em></div><div class="sl">Verified Seniors</div></div>
+<div class="stat fi"><div class="sn">80<em>+</em></div><div class="sl">Medical Colleges</div></div>
+<div class="stat fi"><div class="sn">4.8<em>★</em></div><div class="sl">Avg Session Rating</div></div>
+<div class="stat fi"><div class="sn">₹<em>199</em></div><div class="sl">vs ₹5,000 consultants</div></div>
+</div>
 </section>
-
-<!-- ═══ PRICING ═══ -->
-
 <section id="pricing" class="sec">
-  <div class="wr ctr">
-    <div class="fi">
-      <span class="lbl">Pricing</span>
-      <h2 class="st">Pay only for what you need 💰</h2>
-      <p class="ss">No subscriptions. Full refund guarantee. Simple.</p>
-    </div>
-    <div class="plans">
-      <div class="plan fi">
-        <div class="pn">Quick Chat</div><div class="pd">Got a specific question?</div>
-        <div class="pp">₹99<span>/session</span></div><div class="pdur">15-min WhatsApp chat</div>
-        <ul class="pf"><li>3–5 questions answered</li><li>WhatsApp text session</li><li>Full refund if cancelled</li></ul>
-        <button class="pbtn pb1" onclick="scrollTo('#signup')">Start for ₹99</button>
-      </div>
-      <div class="plan hot fi">
-        <div class="hb3">🔥 Most Popular</div>
-        <div class="pn">Standard Session</div><div class="pd">Best for counselling 😊</div>
-        <div class="pp">₹199<span>/session</span></div><div class="pdur">30-min video or voice call</div>
-        <ul class="pf"><li>College comparison help</li><li>Counselling walkthrough</li><li>Hostel & campus reality</li><li>Post-session notes sent to you</li></ul>
-        <button class="pbtn pb2" onclick="scrollTo('#signup')">Book Now ✨</button>
-      </div>
-      <div class="plan fi">
-        <div class="pn">Deep Dive</div><div class="pd">For big decisions 🎯</div>
-        <div class="pp">₹499<span>/session</span></div><div class="pdur">45-min deep-dive call</div>
-        <ul class="pf"><li>Final-year MBBS senior</li><li>Career path planning</li><li>Full college shortlist review</li><li>Priority booking slot</li></ul>
-        <button class="pbtn pb3" onclick="scrollTo('#signup')">Get Deep Dive</button>
-      </div>
-    </div>
-  </div>
+<div class="wr ctr">
+<div class="fi">
+<span class="lbl">Pricing</span>
+<h2 class="st">Pay only for what you need 💰</h2>
+<p class="ss">No subscriptions. Full refund guarantee. Simple.</p>
+</div>
+<div class="plans">
+<div class="plan fi">
+<div class="pn">Quick Chat</div><div class="pd">Got a specific question?</div>
+<div class="pp">₹99<span>/session</span></div><div class="pdur">15-min WhatsApp chat</div>
+<ul class="pf"><li>3–5 questions answered</li><li>WhatsApp text session</li><li>Full refund if cancelled</li></ul>
+<button class="pbtn pb1" onclick="scrollTo('#signup')">Start for ₹99</button>
+</div>
+<div class="plan hot fi">
+<div class="hb3">🔥 Most Popular</div>
+<div class="pn">Standard Session</div><div class="pd">Best for counselling 😊</div>
+<div class="pp">₹199<span>/session</span></div><div class="pdur">30-min video or voice call</div>
+<ul class="pf"><li>College comparison help</li><li>Counselling walkthrough</li><li>Hostel & campus reality</li><li>Post-session notes sent to you</li></ul>
+<button class="pbtn pb2" onclick="scrollTo('#signup')">Book Now ✨</button>
+</div>
+<div class="plan fi">
+<div class="pn">Deep Dive</div><div class="pd">For big decisions 🎯</div>
+<div class="pp">₹499<span>/session</span></div><div class="pdur">45-min deep-dive call</div>
+<ul class="pf"><li>Final-year MBBS senior</li><li>Career path planning</li><li>Full college shortlist review</li><li>Priority booking slot</li></ul>
+<button class="pbtn pb3" onclick="scrollTo('#signup')">Get Deep Dive</button>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ═══ RANK PREDICTOR ═══ -->
-
 <section id="predictor">
-  <div class="rp fi ctr">
-    <span class="rp-lbl">🎯 Free Tool</span>
-    <h2>NEET Rank Predictor</h2>
-    <p>Enter your score — get an instant rank estimate + AI college suggestions!</p>
-    <div class="rp-card">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
-        <label style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.62)">Your NEET Score</label>
-        <div class="rp-sv" id="rp-disp"><em>396</em> / 720</div>
-      </div>
-      <input type="range" class="rp-sl" id="rp-sl" min="100" max="720" value="396" oninput="rpUpdate(this.value)"/>
-      <div class="rp-row">
-        <div class="rp-fg">
-          <label>Category</label>
-          <select id="rp-cat">
-            <option value="UR">General (UR)</option>
-            <option value="OBC">OBC</option>
-            <option value="SC">SC</option>
-            <option value="ST">ST</option>
-            <option value="EWS">EWS</option>
-          </select>
-        </div>
-        <div class="rp-fg">
-          <label>Preferred State</label>
-          <select id="rp-st">
-            <option>All India</option><option>Delhi</option><option>Maharashtra</option>
-            <option>Tamil Nadu</option><option>Karnataka</option><option>Uttar Pradesh</option>
-            <option>Rajasthan</option><option>Gujarat</option><option>West Bengal</option>
-            <option>Kerala</option><option>Telangana</option><option>Andhra Pradesh</option>
-            <option>Punjab</option><option>Bihar</option>
-          </select>
-        </div>
-      </div>
-      <div class="rp-fg" style="margin-bottom:18px">
-        <label>Your Name (for personalised advice)</label>
-        <input type="text" id="rp-name" style="background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.15);border-radius:9px;padding:10px 12px;color:#fff;font-family:'Nunito',sans-serif;font-size:.88rem;outline:none;width:100%;transition:.2s" placeholder="e.g. Riya" onfocus="this.style.borderColor='var(--t)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
-      </div>
-      <button class="rp-btn" id="rp-btn" onclick="rpPredict()">🎯 Predict My Rank & Get College Suggestions</button>
-      <div id="rp-res" style="display:none" class="rp-res"></div>
-    </div>
-  </div>
+<div class="rp fi ctr">
+<span class="rp-lbl">🎯 Free Tool</span>
+<h2>NEET Rank Predictor</h2>
+<p>Enter your score — get an instant rank estimate + AI college suggestions!</p>
+<div class="rp-card">
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+<label style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.62)">Your NEET Score</label>
+<div class="rp-sv" id="rp-disp"><em>396</em> / 720</div>
+</div>
+<input type="range" class="rp-sl" id="rp-sl" min="100" max="720" value="396" oninput="rpUpdate(this.value)"/>
+<div class="rp-row">
+<div class="rp-fg"><label>Category</label>
+<select id="rp-cat">
+<option value="UR">General (UR)</option><option value="OBC">OBC</option>
+<option value="SC">SC</option><option value="ST">ST</option><option value="EWS">EWS</option>
+</select></div>
+<div class="rp-fg"><label>Preferred State</label>
+<select id="rp-st">
+<option>All India</option><option>Delhi</option><option>Maharashtra</option>
+<option>Tamil Nadu</option><option>Karnataka</option><option>Uttar Pradesh</option>
+<option>Rajasthan</option><option>Gujarat</option><option>West Bengal</option>
+<option>Kerala</option><option>Telangana</option><option>Andhra Pradesh</option>
+<option>Punjab</option><option>Bihar</option>
+</select></div>
+</div>
+<div class="rp-fg" style="margin-bottom:18px">
+<label>Your Name (for personalised advice)</label>
+<input type="text" id="rp-name" style="background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.15);border-radius:9px;padding:10px 12px;color:#fff;font-family:'Nunito',sans-serif;font-size:.88rem;outline:none;width:100%;transition:.2s" placeholder="e.g. Riya" onfocus="this.style.borderColor='var(--t)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'"/>
+</div>
+<button class="rp-btn" id="rp-btn" onclick="rpPredict()">🎯 Predict My Rank & Get College Suggestions</button>
+<div id="rp-res" style="display:none" class="rp-res"></div>
+</div>
+</div>
 </section>
-
-<!-- ═══ SIGNUP ═══ -->
-
 <section id="signup">
-  <div class="si">
-    <div class="fi">
-      <h2>Ready? Let's go! 🚀</h2>
-      <p>Find your senior or join us to start earning.</p>
-    </div>
-    <div class="tabs fi">
-      <button class="tab on" id="tab-a" onclick="swTab('a')">🎯 I'm an Aspirant</button>
-      <button class="tab" id="tab-s" onclick="swTab('s')">🎓 I'm a Senior</button>
-    </div>
-
-```
-<!-- ASPIRANT FORM -->
+<div class="si">
+<div class="fi"><h2>Ready? Let's go! 🚀</h2><p>Find your senior or join us to start earning.</p></div>
+<div class="tabs fi">
+<button class="tab on" id="tab-a" onclick="swTab('a')">🎯 I'm an Aspirant</button>
+<button class="tab" id="tab-s" onclick="swTab('s')">🎓 I'm a Senior</button>
+</div>
 <div id="form-a" class="fi">
-  <div class="fg"><label>Full Name *</label><input type="text" id="a-name" placeholder="e.g. Riya Sharma"/></div>
-  <div class="fg"><label>WhatsApp Number *</label><input type="tel" id="a-wa" placeholder="+91 98765 43210"/></div>
-  <div class="fg"><label>NEET Score (approx) *</label><input type="text" id="a-score" placeholder="e.g. 620"/></div>
-  <div class="fg"><label>Target College *</label><input type="text" id="a-col" placeholder="e.g. AIIMS Delhi, JIPMER..."/></div>
-  <div class="fg"><label>Category</label>
-    <select id="a-cat">
-      <option>General (UR)</option><option>OBC</option><option>SC</option><option>ST</option><option>EWS</option>
-    </select>
-  </div>
-  <div class="fg"><label>What help do you need?</label>
-    <select id="a-help">
-      <option>Select main concern</option>
-      <option>College selection & comparison</option>
-      <option>Understanding counselling process</option>
-      <option>Hostel & campus life</option>
-      <option>State vs All-India quota</option>
-      <option>Government vs Private college</option>
-      <option>NEET-PG planning</option>
-    </select>
-  </div>
-  <button class="fsub" id="a-sub" onclick="submitAsp()">Find My Senior 🔍</button>
-  <p class="fnote">🔒 Private & secure. We match you within 24 hours.</p>
+<div class="fg"><label>Full Name *</label><input type="text" id="a-name" placeholder="e.g. Riya Sharma"/></div>
+<div class="fg"><label>WhatsApp Number *</label><input type="tel" id="a-wa" placeholder="+91 98765 43210"/></div>
+<div class="fg"><label>NEET Score (approx) *</label><input type="text" id="a-score" placeholder="e.g. 620"/></div>
+<div class="fg"><label>Target College *</label><input type="text" id="a-col" placeholder="e.g. AIIMS Delhi, JIPMER..."/></div>
+<div class="fg"><label>Category</label>
+<select id="a-cat"><option>General (UR)</option><option>OBC</option><option>SC</option><option>ST</option><option>EWS</option></select>
 </div>
-
-<!-- SENIOR FORM -->
+<div class="fg"><label>What help do you need?</label>
+<select id="a-help">
+<option>Select main concern</option>
+<option>College selection & comparison</option>
+<option>Understanding counselling process</option>
+<option>Hostel & campus life</option>
+<option>State vs All-India quota</option>
+<option>Government vs Private college</option>
+<option>NEET-PG planning</option>
+</select>
+</div>
+<button class="fsub" id="a-sub" onclick="submitAsp()">Find My Senior 🔍</button>
+<p class="fnote">🔒 Private & secure. We match you within 24 hours.</p>
+</div>
 <div id="form-s" style="display:none" class="fi">
-  <div class="fg"><label>Full Name *</label><input type="text" id="s-name" placeholder="e.g. Arjun Patel"/></div>
-  <div class="fg"><label>WhatsApp Number *</label><input type="tel" id="s-wa" placeholder="+91 98765 43210"/></div>
-  <div class="fg"><label>Your College *</label><input type="text" id="s-col" placeholder="e.g. MAMC New Delhi"/></div>
-  <div class="fg"><label>Current Year</label>
-    <select id="s-yr">
-      <option>1st Year MBBS</option><option>2nd Year MBBS</option>
-      <option>3rd Year MBBS</option><option>Final Year MBBS</option><option>BDS / Other</option>
-    </select>
-  </div>
-  <div class="fg"><label>NEET AIR (All India Rank)</label><input type="text" id="s-air" placeholder="e.g. AIR 847"/></div>
-  <div class="fg"><label>UPI ID (for payments)</label><input type="text" id="s-upi" placeholder="e.g. name@paytm"/></div>
-  <div class="fg"><label>What can you help with?</label>
-    <select id="s-help">
-      <option>Select your expertise</option>
-      <option>MCC / State counselling process</option>
-      <option>College comparison & selection</option>
-      <option>Hostel & campus life</option>
-      <option>Fees breakdown & financial planning</option>
-      <option>NEET-PG preparation</option>
-      <option>Life as a 1st year MBBS student</option>
-    </select>
-  </div>
-  <button class="fsub" id="s-sub" onclick="submitSenior()">Join & Start Earning 💰</button>
-  <p class="fnote">📋 Verified in 48 hrs. Earn ₹140+ per session!</p>
+<div class="fg"><label>Full Name *</label><input type="text" id="s-name" placeholder="e.g. Arjun Patel"/></div>
+<div class="fg"><label>WhatsApp Number *</label><input type="tel" id="s-wa" placeholder="+91 98765 43210"/></div>
+<div class="fg"><label>Your College *</label><input type="text" id="s-col" placeholder="e.g. MAMC New Delhi"/></div>
+<div class="fg"><label>Current Year</label>
+<select id="s-yr"><option>1st Year MBBS</option><option>2nd Year MBBS</option><option>3rd Year MBBS</option><option>Final Year MBBS</option><option>BDS / Other</option></select>
 </div>
-```
-
-  </div>
+<div class="fg"><label>NEET AIR (All India Rank)</label><input type="text" id="s-air" placeholder="e.g. AIR 847"/></div>
+<div class="fg"><label>UPI ID (for payments)</label><input type="text" id="s-upi" placeholder="e.g. name@paytm"/></div>
+<div class="fg"><label>What can you help with?</label>
+<select id="s-help">
+<option>Select your expertise</option>
+<option>MCC / State counselling process</option>
+<option>College comparison & selection</option>
+<option>Hostel & campus life</option>
+<option>Fees breakdown & financial planning</option>
+<option>NEET-PG preparation</option>
+<option>Life as a 1st year MBBS student</option>
+</select>
+</div>
+<button class="fsub" id="s-sub" onclick="submitSenior()">Join & Start Earning 💰</button>
+<p class="fnote">📋 Verified in 48 hrs. Earn ₹140+ per session!</p>
+</div>
+</div>
 </section>
-
-<!-- ═══ FOOTER ═══ -->
-
 <footer>
-  <div class="flogo">🏥 NEET<span>Connect</span></div>
-  <div class="flinks">
-    <a href="#how">How It Works</a><a href="#seniors">Seniors</a>
-    <a href="#predictor">Rank Predictor</a><a href="#pricing">Pricing</a>
-    <a href="#signup">Sign Up</a>
-  </div>
-  <p>Made with ❤️ for India's 20 lakh NEET aspirants · © 2026 NEET Counselling Connect</p>
+<div class="flogo">🏥 NEET<span>Connect</span></div>
+<div class="flinks">
+<a href="#how">How It Works</a><a href="#seniors">Seniors</a>
+<a href="#predictor">Rank Predictor</a><a href="#pricing">Pricing</a><a href="#signup">Sign Up</a>
+</div>
+<p>Made with ❤️ for India's 20 lakh NEET aspirants · © 2026 NEET Counselling Connect</p>
 </footer>
-
-<!-- ═══ FLOATING BUTTONS ═══ -->
-
 <a class="float-wa" href="https://wa.me/919999000000?text=Hi!%20I%20need%20help%20with%20NEET%20counselling" target="_blank">💬 WhatsApp</a>
 <button class="float-sr" onclick="scrollTo('#signup')">🔍 Find a Senior</button>
-
-<!-- ═══ HOSTELBOT ═══ -->
-
-<button id="hb-bbl" onclick="hbToggle()">
-  🏠<div class="hb-badge" id="hb-bdg">1</div>
-</button>
+<button id="hb-bbl" onclick="hbToggle()">🏠<div class="hb-badge" id="hb-bdg">1</div></button>
 <div id="hb-pop" class="closed">
-  <div class="hb-hd">
-    <div class="hb-av">🏠</div>
-    <div style="flex:1">
-      <div style="color:#fff;font-weight:800;font-size:12px">HostelBot</div>
-      <div style="color:rgba(255,255,255,.5);font-size:10px"><span class="hb-on"></span>Hostel & Campus Expert</div>
-    </div>
-    <button class="hb-x" onclick="hbToggle()">✕</button>
-  </div>
-  <div class="hb-msgs" id="hb-msgs"></div>
-  <div class="hb-ir">
-    <textarea id="hb-in" placeholder="Ask about hostel life... 🏠" rows="1" onkeydown="hbKey(event)"></textarea>
-    <button id="hb-sd" onclick="hbSend()" disabled>➤</button>
-  </div>
-  <div class="hb-ft">Powered by AI · NEET Counselling Connect</div>
+<div class="hb-hd">
+<div class="hb-av">🏠</div>
+<div style="flex:1"><div style="color:#fff;font-weight:800;font-size:12px">HostelBot</div>
+<div style="color:rgba(255,255,255,.5);font-size:10px"><span class="hb-on"></span>Hostel & Campus Expert</div></div>
+<button class="hb-x" onclick="hbToggle()">✕</button>
 </div>
-
-<!-- ═══ SENIOR PROFILES MODAL ═══ -->
-
+<div class="hb-msgs" id="hb-msgs"></div>
+<div class="hb-ir">
+<textarea id="hb-in" placeholder="Ask about hostel life... 🏠" rows="1" onkeydown="hbKey(event)"></textarea>
+<button id="hb-sd" onclick="hbSend()" disabled>➤</button>
+</div>
+<div class="hb-ft">Powered by AI · NEET Counselling Connect</div>
+</div>
 <div id="sp-modal" style="display:none">
-  <div class="sp-hd">
-    <div class="sp-hw">
-      <div id="sp-title"></div>
-      <button class="sp-back" onclick="closeSP()">← Back to Website</button>
-    </div>
-    <div style="max-width:900px;margin:10px auto 0;display:flex;gap:7px;flex-wrap:wrap">
-      <div style="background:rgba(0,168,157,.25);border:1px solid rgba(0,168,157,.4);color:#7FDED8;font-size:.72rem;font-weight:800;padding:4px 11px;border-radius:99px">✅ All Verified</div>
-      <div style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:99px">⭐ 4.7+ Rating</div>
-      <div style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:99px">💬 Reply within 2hrs</div>
-    </div>
-  </div>
-  <div class="sp-grid" id="sp-grid"></div>
-  <div class="sp-bot">
-    <p style="color:rgba(255,255,255,.55);font-size:.82rem;margin-bottom:10px">Don't see your target college? We have 250+ seniors across 80 colleges!</p>
-    <a href="https://wa.me/919999000000?text=Hi!%20I%20need%20a%20senior%20from%20my%20target%20college" target="_blank"
-      style="display:inline-flex;align-items:center;gap:7px;background:var(--g);color:var(--n);font-family:'Nunito',sans-serif;font-weight:900;font-size:.88rem;padding:11px 24px;border-radius:99px;text-decoration:none">
-      💬 Request a Senior for Your College
-    </a>
-  </div>
+<div class="sp-hd">
+<div class="sp-hw"><div id="sp-title"></div>
+<button class="sp-back" onclick="closeSP()">← Back to Website</button></div>
+<div style="max-width:900px;margin:10px auto 0;display:flex;gap:7px;flex-wrap:wrap">
+<div style="background:rgba(0,168,157,.25);border:1px solid rgba(0,168,157,.4);color:#7FDED8;font-size:.72rem;font-weight:800;padding:4px 11px;border-radius:99px">✅ All Verified</div>
+<div style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:99px">⭐ 4.7+ Rating</div>
+<div style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:99px">💬 Reply within 2hrs</div>
+</div></div>
+<div class="sp-grid" id="sp-grid"></div>
+<div class="sp-bot">
+<p style="color:rgba(255,255,255,.55);font-size:.82rem;margin-bottom:10px">Don't see your target college? We have 250+ seniors across 80 colleges!</p>
+<a href="https://wa.me/919999000000?text=Hi!%20I%20need%20a%20senior%20from%20my%20target%20college" target="_blank"
+style="display:inline-flex;align-items:center;gap:7px;background:var(--g);color:var(--n);font-family:'Nunito',sans-serif;font-weight:900;font-size:.88rem;padding:11px 24px;border-radius:99px;text-decoration:none">
+💬 Request a Senior for Your College</a>
 </div>
-
-<!-- ═══ ADMIN MODAL ═══ -->
-
+</div>
 <div id="admin-modal">
-  <div class="adm-hd">
-    <div style="display:flex;align-items:center;gap:10px">
-      <span style="font-size:1.1rem">⚙️</span>
-      <span style="color:#fff;font-weight:900;font-size:1rem">Admin Dashboard</span>
-      <span style="background:rgba(0,168,157,.2);color:#7FDED8;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:99px">NEET Connect</span>
-    </div>
-    <button onclick="closeAdmin()" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:99px;cursor:pointer">✕ Close</button>
-  </div>
-  <div class="adm-body">
-    <div class="adm-stats-row" id="adm-stats-row"></div>
-    <div class="adm-tabs">
-      <button class="adm-tab on" onclick="admTab('students',this)">🎯 Students</button>
-      <button class="adm-tab" onclick="admTab('seniors',this)">🎓 Seniors</button>
-    </div>
-    <div id="adm-content"></div>
-  </div>
+<div class="adm-hd">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="font-size:1.1rem">⚙️</span>
+<span style="color:#fff;font-weight:900;font-size:1rem">Admin Dashboard</span>
+<span style="background:rgba(0,168,157,.2);color:#7FDED8;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:99px">NEET Connect</span>
 </div>
-
-<!-- ═══ LOGIN MODAL ═══ -->
-
+<button onclick="closeAdmin()" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:99px;cursor:pointer">✕ Close</button>
+</div>
+<div class="adm-body">
+<div class="adm-stats-row" id="adm-stats-row"></div>
+<div class="adm-tabs">
+<button class="adm-tab on" onclick="admTab('students',this)">🎯 Students</button>
+<button class="adm-tab" onclick="admTab('seniors',this)">🎓 Seniors</button>
+</div>
+<div id="adm-content"></div>
+</div>
+</div>
 <div id="login-modal">
-  <div class="login-box">
-    <div style="font-size:2rem;margin-bottom:8px">🔐</div>
-    <h3>Admin Login</h3>
-    <p>Enter the admin password to access the dashboard</p>
-    <div class="login-err" id="login-err">❌ Wrong password. Try again.</div>
-    <input type="password" class="login-inp" id="login-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"/>
-    <button class="login-btn" onclick="doLogin()">Login →</button>
-    <button class="login-cancel" onclick="closeLogin()">Cancel</button>
-  </div>
+<div class="login-box">
+<div style="font-size:2rem;margin-bottom:8px">🔐</div>
+<h3>Admin Login</h3>
+<p>Enter the admin password to access the dashboard</p>
+<div class="login-err" id="login-err">❌ Wrong password. Try again.</div>
+<input type="password" class="login-inp" id="login-pw" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"/>
+<button class="login-btn" onclick="doLogin()">Login →</button>
+<button class="login-cancel" onclick="closeLogin()">Cancel</button>
 </div>
+</div>
+<script type="text/javascript">
+window.onerror = function(msg, src, line, col, err) {
+  console.log('JS Error:', msg, 'Line:', line, 'Col:', col);
+  return false;
+};
 
-<script>
-// ══════════════════════════════════════════════════
-// 🔑 GEMINI API KEY
-// ══════════════════════════════════════════════════
-const GK = "AIzaSyDFh7ui98A0-QvB98McXnZC9OuptzZnBZw";
+// ================================================
+// DATABASE - routes through secure Vercel backend
+// ================================================
+async function dbInsert(table, data) {
+try {
+const res = await fetch(’/api/save’, {
+method: ‘POST’,
+headers: { ‘Content-Type’: ‘application/json’ },
+body: JSON.stringify({ table, data })
+});
+const result = await res.json();
+return result.success ? { error: null } : { error: result.error };
+} catch(e) {
+return { error: e.message };
+}
+}
 
-// Admin password
-const ADMIN_PW = "neetadmin2026";
+async function dbSelect(table) {
+try {
+const res = await fetch(’/api/load?table=’ + table);
+const result = await res.json();
+return result.data ? { data: result.data, error: null } : { data: [], error: result.error };
+} catch(e) {
+return { data: [], error: e.message };
+}
+}
 
-// ── AI Helper ──────────────────────────────────────
+// ================================================
+// SECURE AI - calls backend /api/gemini
+// ================================================
 async function callAI(system, messages, maxT=600) {
-  try {
-    const msgs = messages.map(m => ({
-      role: m.role === "assistant" ? "model" : "user",
-      parts: [{ text: m.content }]
-    }));
-    const res = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + GK,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          systemInstruction: { parts: [{ text: system }] },
-          contents: msgs,
-          generationConfig: { maxOutputTokens: maxT, temperature: 0.7 }
-        })
-      }
-    );
-    const d = await res.json();
-    const txt = d.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't get a response. Please try again!";
-    return { content: [{ text: txt }] };
-  } catch(e) {
-    return { content: [{ text: "Connection error. Please check internet and try again." }] };
-  }
+try {
+const res = await fetch(’/api/gemini’, {
+method: ‘POST’,
+headers: { ‘Content-Type’: ‘application/json’ },
+body: JSON.stringify({ system, messages, maxTokens: maxT })
+});
+const data = await res.json();
+return { content: [{ text: data.text || ‘Sorry, try again!’ }] };
+} catch(e) {
+return { content: [{ text: ‘Connection error. Please check internet and try again.’ }] };
+}
 }
 
-// ── Scroll helper ──────────────────────────────────
+const ADMIN_PW = “neetadmin2026”;
+
 function scrollTo(id) {
-  const el = document.querySelector(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
+const el = document.querySelector(id);
+if (el) el.scrollIntoView({ behavior: “smooth” });
 }
 
-// ── Fade in observer ───────────────────────────────
 const obs = new IntersectionObserver(e => e.forEach(x => {
-  if (x.isIntersecting) x.target.classList.add("in");
+if (x.isIntersecting) x.target.classList.add(“in”);
 }), { threshold: 0.1 });
-document.querySelectorAll(".fi").forEach(el => obs.observe(el));
+document.querySelectorAll(”.fi”).forEach(el => obs.observe(el));
 
-// Show nav rank predictor link after scroll
-window.addEventListener("scroll", () => {
-  const rp = document.getElementById("nav-rp");
-  if (rp) rp.style.display = window.scrollY > 400 ? "inline-flex" : "none";
+window.addEventListener(“scroll”, () => {
+const rp = document.getElementById(“nav-rp”);
+if (rp) rp.style.display = window.scrollY > 400 ? “inline-flex” : “none”;
 });
 
-// ── SENIORS DATA ───────────────────────────────────
 const SENIORS_DATA = [
-  { name:"Priya Mehta", college:"AIIMS New Delhi", year:"2nd Year MBBS", air:"AIR 847",
-    tags:["Delhi Counselling","Hostel Life","Hindi & English"],
-    quote:"Ask me anything about AIIMS counselling — I went through every stressful round of it!",
-    rating:"4.9", sessions:"48", price:"₹199", emoji:"👩", bg:"#E6F7F6", wa:"919999000001" },
-  { name:"Rahul Sharma", college:"MAMC, New Delhi", year:"3rd Year MBBS", air:"AIR 1,204",
-    tags:["MCC Counselling","College Comparison","Hindi"],
-    quote:"Confused between colleges? I'll walk you through my exact decision-making process.",
-    rating:"4.8", sessions:"62", price:"₹199", emoji:"👨", bg:"#FFF8EC", wa:"919999000002" },
-  { name:"Anjali Krishnan", college:"JIPMER, Puducherry", year:"Final Year MBBS", air:"AIR 423",
-    tags:["Campus Life","NEET-PG Strategy","Tamil & English"],
-    quote:"I'll tell you the good AND the bad about JIPMER — nothing held back!",
-    rating:"5.0", sessions:"31", price:"₹199", emoji:"👩", bg:"#F3EEFF", wa:"919999000003" },
-  { name:"Arjun Patel", college:"B.J. Medical College, Ahmedabad", year:"2nd Year MBBS", air:"AIR 2,890",
-    tags:["Gujarat Quota","State Counselling","Gujarati & Hindi"],
-    quote:"State quota vs All-India confused me too. I'll clear all your doubts in one call.",
-    rating:"4.7", sessions:"19", price:"₹199", emoji:"👨", bg:"#ECFDF5", wa:"919999000004" },
-  { name:"Sneha Iyer", college:"KMC Manipal", year:"3rd Year MBBS", air:"Mgmt Quota",
-    tags:["Private Colleges","Fees Breakdown","Karnataka"],
-    quote:"I'll give you an honest breakdown of private college costs — what's worth it and what's not.",
-    rating:"4.9", sessions:"27", price:"₹199", emoji:"👩", bg:"#FEF2F2", wa:"919999000005" },
-  { name:"Karan Singh", college:"SMS Medical College, Jaipur", year:"Final Year MBBS", air:"AIR 3,450",
-    tags:["Rajasthan Quota","Hostel Life","Hindi"],
-    quote:"SMS is underrated! Let me tell you why I chose it and what life is really like here.",
-    rating:"4.8", sessions:"22", price:"₹199", emoji:"👨", bg:"#EFF6FF", wa:"919999000006" },
+{ name:“Priya Mehta”, college:“AIIMS New Delhi”, year:“2nd Year MBBS”, air:“AIR 847”,
+tags:[“Delhi Counselling”,“Hostel Life”,“Hindi & English”],
+quote:“Ask me anything about AIIMS counselling — I went through every stressful round of it!”,
+rating:“4.9”, sessions:“48”, price:“₹199”, emoji:“👩”, bg:”#E6F7F6”, wa:“919999000001” },
+{ name:“Rahul Sharma”, college:“MAMC, New Delhi”, year:“3rd Year MBBS”, air:“AIR 1,204”,
+tags:[“MCC Counselling”,“College Comparison”,“Hindi”],
+quote:“Confused between colleges? I’ll walk you through my exact decision-making process.”,
+rating:“4.8”, sessions:“62”, price:“₹199”, emoji:“👨”, bg:”#FFF8EC”, wa:“919999000002” },
+{ name:“Anjali Krishnan”, college:“JIPMER, Puducherry”, year:“Final Year MBBS”, air:“AIR 423”,
+tags:[“Campus Life”,“NEET-PG Strategy”,“Tamil & English”],
+quote:“I’ll tell you the good AND the bad about JIPMER — nothing held back!”,
+rating:“5.0”, sessions:“31”, price:“₹199”, emoji:“👩”, bg:”#F3EEFF”, wa:“919999000003” },
+{ name:“Arjun Patel”, college:“B.J. Medical College, Ahmedabad”, year:“2nd Year MBBS”, air:“AIR 2,890”,
+tags:[“Gujarat Quota”,“State Counselling”,“Gujarati & Hindi”],
+quote:“State quota vs All-India confused me too. I’ll clear all your doubts in one call.”,
+rating:“4.7”, sessions:“19”, price:“₹199”, emoji:“👨”, bg:”#ECFDF5”, wa:“919999000004” },
+{ name:“Sneha Iyer”, college:“KMC Manipal”, year:“3rd Year MBBS”, air:“Mgmt Quota”,
+tags:[“Private Colleges”,“Fees Breakdown”,“Karnataka”],
+quote:“I’ll give you an honest breakdown of private college costs — what’s worth it and what’s not.”,
+rating:“4.9”, sessions:“27”, price:“₹199”, emoji:“👩”, bg:”#FEF2F2”, wa:“919999000005” },
+{ name:“Karan Singh”, college:“SMS Medical College, Jaipur”, year:“Final Year MBBS”, air:“AIR 3,450”,
+tags:[“Rajasthan Quota”,“Hostel Life”,“Hindi”],
+quote:“SMS is underrated! Let me tell you why I chose it and what life is really like here.”,
+rating:“4.8”, sessions:“22”, price:“₹199”, emoji:“👨”, bg:”#EFF6FF”, wa:“919999000006” },
 ];
 
-// ── Render homepage senior cards ───────────────────
 function renderHomeCards() {
-  const grid = document.getElementById("senior-cards");
-  if (!grid) return;
-  grid.innerHTML = "";
-  SENIORS_DATA.slice(0, 6).forEach(s => {
-    const card = document.createElement("div");
-    card.className = "card fi";
-    card.innerHTML =
-      '<div class="ct">' +
-        '<div class="av" style="background:' + s.bg + '">' + s.emoji + '</div>' +
-        '<div><div class="cn">' + s.name + '</div>' +
-        '<div class="cc">' + s.college + '</div>' +
-        '<div class="cy">' + s.year + ' · ' + s.air + '</div></div>' +
-      '</div>' +
-      '<div class="cb">' +
-        '<div class="cq">"' + s.quote + '"</div>' +
-        '<div class="cm"><div class="crt">&#11088; ' + s.rating + ' (' + s.sessions + ' sessions)</div>' +
-        '<div class="cr">' + s.price + '</div></div>' +
-      '</div>' +
-      '<div class="cf">' +
-        '<button class="cf1" onclick="openWA(\'' + s.wa + '\',\'' + s.name + '\')">💬 Chat</button>' +
-        '<button class="cf2" onclick="bookSenior(\'' + s.name + '\',\'' + s.wa + '\')">📅 Book</button>' +
-      '</div>';
-    grid.appendChild(card);
-    obs.observe(card);
-  });
+const grid = document.getElementById(“senior-cards”);
+if (!grid) return;
+grid.innerHTML = “”;
+SENIORS_DATA.slice(0,6).forEach(s => {
+const card = document.createElement(“div”);
+card.className = “card fi”;
+card.innerHTML =
+‘<div class="ct"><div class="av" style="background:'+s.bg+'">’+s.emoji+’</div>’ +
+‘<div><div class="cn">’+s.name+’</div><div class="cc">’+s.college+’</div>’ +
+‘<div class="cy">’+s.year+’ · ‘+s.air+’</div></div></div>’ +
+‘<div class="cb"><div class="cq">”’+s.quote+’”</div>’ +
+‘<div class="cm"><div class="crt">⭐ ‘+s.rating+’ (’+s.sessions+’ sessions)</div>’ +
+‘<div class="cr">’+s.price+’</div></div></div>’ +
+‘<div class="cf"><button class="cf1" onclick="openWA(\''+s.wa+'\',\''+s.name+'\')">💬 Chat</button>’ +
+‘<button class="cf2" onclick="bookSenior(\''+s.name+'\',\''+s.wa+'\')">📅 Book</button></div>’;
+grid.appendChild(card);
+obs.observe(card);
+});
 }
 renderHomeCards();
 
 function openWA(wa, name) {
-  const msg = encodeURIComponent("Hi " + name + "! I found your profile on NEET Counselling Connect. I have some questions about NEET counselling. Are you available? 😊");
-  window.open("https://wa.me/" + wa + "?text=" + msg, "_blank");
+const msg = encodeURIComponent(“Hi “+name+”! I found your profile on NEET Counselling Connect. I have some questions about NEET counselling. Are you available? 😊”);
+window.open(“https://wa.me/”+wa+”?text=”+msg,”_blank”);
 }
-
 function bookSenior(name, wa) {
-  const msg = encodeURIComponent("Hi " + name + "! I'd like to book a counselling session with you from NEET Counselling Connect. Please share your available slots!");
-  window.open("https://wa.me/" + wa + "?text=" + msg, "_blank");
+const msg = encodeURIComponent(“Hi “+name+”! I’d like to book a counselling session with you from NEET Counselling Connect. Please share your available slots!”);
+window.open(“https://wa.me/”+wa+”?text=”+msg,”_blank”);
 }
-
-// ── Tab switch ────────────────────────────────────
 function swTab(t) {
-  document.getElementById("tab-a").className = "tab" + (t === "a" ? " on" : "");
-  document.getElementById("tab-s").className = "tab" + (t === "s" ? " on" : "");
-  document.getElementById("form-a").style.display = t === "a" ? "block" : "none";
-  document.getElementById("form-s").style.display = t === "s" ? "block" : "none";
+document.getElementById(“tab-a”).className=“tab”+(t===“a”?” on”:””);
+document.getElementById(“tab-s”).className=“tab”+(t===“s”?” on”:””);
+document.getElementById(“form-a”).style.display=t===“a”?“block”:“none”;
+document.getElementById(“form-s”).style.display=t===“s”?“block”:“none”;
 }
 
-// ── Data Storage (localStorage) ───────────────────
-function saveResponse(type, data) {
-  const key = type === "student" ? "nc_students" : "nc_seniors";
-  const list = JSON.parse(localStorage.getItem(key) || "[]");
-  data.timestamp = new Date().toLocaleString("en-IN");
-  data.id = Date.now();
-  list.unshift(data);
-  localStorage.setItem(key, JSON.stringify(list));
+// ================================================
+// SUPABASE SAVE FUNCTIONS
+// ================================================
+async function submitAsp() {
+const name = document.getElementById(“a-name”).value.trim();
+const wa = document.getElementById(“a-wa”).value.trim();
+const score = document.getElementById(“a-score”).value.trim();
+const col = document.getElementById(“a-col”).value.trim();
+if (!name||!wa||!col) { alert(“Please fill Name, WhatsApp Number and Target College!”); return; }
+const btn = document.getElementById(“a-sub”);
+btn.textContent = “Saving… ⏳”; btn.disabled = true;
+const { error } = await dbInsert(‘students’, {
+name, wa, score, college: col,
+category: document.getElementById(“a-cat”).value,
+help: document.getElementById(“a-help”).value,
+timestamp: new Date().toLocaleString(“en-IN”)
+});
+if (error) {
+console.error(error);
+btn.textContent = “Find My Senior 🔍”; btn.disabled = false;
+alert(“Something went wrong. Please try again!”);
+return;
+}
+btn.textContent = “Find My Senior 🔍”; btn.disabled = false;
+showSeniorProfiles(name, col);
 }
 
-function getResponses(type) {
-  const key = type === "student" ? "nc_students" : "nc_seniors";
-  return JSON.parse(localStorage.getItem(key) || "[]");
+async function submitSenior() {
+const name = document.getElementById(“s-name”).value.trim();
+const wa = document.getElementById(“s-wa”).value.trim();
+const col = document.getElementById(“s-col”).value.trim();
+if (!name||!wa||!col) { alert(“Please fill Name, WhatsApp Number and College!”); return; }
+const btn = document.getElementById(“s-sub”);
+btn.textContent = “Saving… ⏳”; btn.disabled = true;
+const { error } = await dbInsert(‘seniors’, {
+name, wa, college: col,
+year: document.getElementById(“s-yr”).value,
+air: document.getElementById(“s-air”).value,
+upi: document.getElementById(“s-upi”).value,
+help: document.getElementById(“s-help”).value,
+timestamp: new Date().toLocaleString(“en-IN”)
+});
+if (error) {
+console.error(error);
+btn.textContent = “Join & Start Earning 💰”; btn.disabled = false;
+alert(“Something went wrong. Please try again!”);
+return;
+}
+btn.textContent = “🎉 Registered! We’ll verify & contact you in 48hrs!”;
+btn.style.background = “#10B981”;
+setTimeout(() => { btn.textContent=“Join & Start Earning 💰”; btn.style.background=””; btn.disabled=false; }, 5000);
+[“s-name”,“s-wa”,“s-air”,“s-upi”].forEach(id => document.getElementById(id).value=””);
 }
 
-// ── Submit Aspirant ───────────────────────────────
-function submitAsp() {
-  const name = document.getElementById("a-name").value.trim();
-  const wa = document.getElementById("a-wa").value.trim();
-  const score = document.getElementById("a-score").value.trim();
-  const col = document.getElementById("a-col").value.trim();
-  if (!name || !wa || !col) {
-    alert("Please fill Name, WhatsApp Number and Target College!");
-    return;
-  }
-  saveResponse("student", {
-    name, wa, score, college: col,
-    category: document.getElementById("a-cat").value,
-    help: document.getElementById("a-help").value
-  });
-  // Show senior profiles
-  showSeniorProfiles(name, col);
+// ================================================
+// ADMIN - loads from Supabase
+// ================================================
+function showLogin() {
+document.getElementById(“login-modal”).classList.add(“show”);
+setTimeout(()=>document.getElementById(“login-pw”).focus(),100);
+}
+function closeLogin() {
+document.getElementById(“login-modal”).classList.remove(“show”);
+document.getElementById(“login-pw”).value=””;
+document.getElementById(“login-err”).style.display=“none”;
+}
+function doLogin() {
+const pw = document.getElementById(“login-pw”).value;
+if (pw===ADMIN_PW) { closeLogin(); showAdmin(); }
+else { document.getElementById(“login-err”).style.display=“block”; document.getElementById(“login-pw”).value=””; }
 }
 
-// ── Submit Senior ─────────────────────────────────
-function submitSenior() {
-  const name = document.getElementById("s-name").value.trim();
-  const wa = document.getElementById("s-wa").value.trim();
-  const col = document.getElementById("s-col").value.trim();
-  if (!name || !wa || !col) {
-    alert("Please fill Name, WhatsApp Number and College!");
-    return;
-  }
-  saveResponse("senior", {
-    name, wa, college: col,
-    year: document.getElementById("s-yr").value,
-    air: document.getElementById("s-air").value,
-    upi: document.getElementById("s-upi").value,
-    help: document.getElementById("s-help").value
-  });
-  const btn = document.getElementById("s-sub");
-  btn.textContent = "🎉 Registered! We'll verify & contact you in 48hrs!";
-  btn.style.background = "#10B981"; btn.disabled = true;
-  setTimeout(() => { btn.textContent = "Join & Start Earning 💰"; btn.style.background = ""; btn.disabled = false; }, 5000);
-  // Clear form
-  ["s-name","s-wa","s-air","s-upi"].forEach(id => document.getElementById(id).value = "");
+async function showAdmin() {
+const modal = document.getElementById(“admin-modal”);
+modal.classList.add(“show”);
+const { data: students } = await dbSelect(‘students’);
+const { data: seniors } = await dbSelect(‘seniors’);
+const row = document.getElementById(“adm-stats-row”);
+row.innerHTML =
+‘<div class="adm-stat"><div class="n">’+(students||[]).length+’</div><div class="l">Total Students</div></div>’ +
+‘<div class="adm-stat"><div class="n">’+(seniors||[]).length+’</div><div class="l">Senior Applicants</div></div>’ +
+‘<div class="adm-stat"><div class="n"><em>0</em></div><div class="l">Sessions Today</div></div>’ +
+‘<div class="adm-stat"><div class="n"><em>₹0</em></div><div class="l">Revenue Today</div></div>’;
+renderAdmTable(students||[], ‘students’);
 }
 
-// ── Senior Profiles Modal ─────────────────────────
+function closeAdmin() { document.getElementById(“admin-modal”).classList.remove(“show”); }
+
+async function admTab(type, btn) {
+document.querySelectorAll(”.adm-tab”).forEach(t=>t.classList.remove(“on”));
+if (btn) btn.classList.add(“on”);
+const { data } = await dbSelect(type===‘students’?‘students’:‘seniors’);
+renderAdmTable(data||[], type);
+}
+
+function renderAdmTable(data, type) {
+const content = document.getElementById(“adm-content”);
+if (!data.length) { content.innerHTML=’<div class="adm-empty">No ‘+type+’ yet 🎯</div>’; return; }
+const cols = type===‘students’
+? [“Name”,“WhatsApp”,“Score”,“Target College”,“Category”,“Help”,“Time”]
+: [“Name”,“WhatsApp”,“College”,“Year”,“AIR”,“UPI”,“Help”,“Time”];
+content.innerHTML = ‘<div style="overflow-x:auto"><table class="adm-table"><thead><tr>’ +
+cols.map(c=>’<th>’+c+’</th>’).join(””)+’<th>Action</th></tr></thead><tbody>’ +
+data.map(r => {
+const cells = type===‘students’
+? [r.name,r.wa,r.score||”-”,r.college,r.category||”-”,r.help||”-”,r.timestamp||”-”]
+: [r.name,r.wa,r.college,r.year||”-”,r.air||”-”,r.upi||”-”,r.help||”-”,r.timestamp||”-”];
+return ‘<tr>’+cells.map(c=>’<td>’+(c||”-”)+’</td>’).join(””) +
+‘<td><button class=“adm-wa” onclick=“window.open('https://wa.me/’+(r.wa||””).replace(/[^0-9]/g,””)+’','_blank')”>  WhatsApp</button></td></tr>’;
+}).join(””)+’</tbody></table></div>’;
+}
+
 function showSeniorProfiles(name, college) {
-  const modal = document.getElementById("sp-modal");
-  const titleEl = document.getElementById("sp-title");
-  const grid = document.getElementById("sp-grid");
-
-  titleEl.innerHTML =
-    '<div style="color:#7FDED8;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Hey ' + (name || "there") + '! Here are your matched seniors</div>' +
-    '<h2 style="color:#fff;font-family:\'Nunito\',sans-serif;font-weight:900;font-size:1.25rem;line-height:1.2">' +
-    (college ? 'Seniors for <em style="color:#F5A623;font-style:normal">' + college + '</em> & more' : 'Choose a senior to connect with') +
-    '</h2>';
-
-  grid.innerHTML = "";
-  SENIORS_DATA.forEach((s, i) => {
-    const card = document.createElement("div");
-    card.className = "sp-card";
-    card.style.animationDelay = (i * 0.07) + "s";
-    const tagsHtml = s.tags.map(t =>
-      '<span style="background:#F4F7FB;color:#1C2340;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:99px">' + t + '</span>'
-    ).join("");
-    card.innerHTML =
-      '<div class="ct">' +
-        '<div class="av" style="background:' + s.bg + '">' + s.emoji + '</div>' +
-        '<div><div class="cn">' + s.name + '</div>' +
-        '<div class="cc">' + s.college + '</div>' +
-        '<div class="cy">' + s.year + ' · ' + s.air + '</div></div>' +
-      '</div>' +
-      '<div style="padding:0 16px 10px;display:flex;flex-wrap:wrap;gap:5px">' + tagsHtml + '</div>' +
-      '<div class="cb">' +
-        '<div class="cq">"' + s.quote + '"</div>' +
-        '<div class="cm"><div class="crt">&#11088; ' + s.rating + ' (' + s.sessions + ' sessions)</div>' +
-        '<div class="cr">' + s.price + '</div></div>' +
-      '</div>' +
-      '<div class="cf">' +
-        '<button class="cf3" onclick="openWA(\'' + s.wa + '\',\'' + s.name + '\')">💬 WhatsApp</button>' +
-        '<button class="cf2" onclick="bookSenior(\'' + s.name + '\',\'' + s.wa + '\')">📅 Book</button>' +
-      '</div>';
-    grid.appendChild(card);
-  });
-
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden";
-  modal.scrollTop = 0;
+const modal = document.getElementById(“sp-modal”);
+const titleEl = document.getElementById(“sp-title”);
+const grid = document.getElementById(“sp-grid”);
+titleEl.innerHTML =
+‘<div style="color:#7FDED8;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">Hey ‘+(name||“there”)+’! Here are your matched seniors</div>’ +
+‘<h2 style="color:#fff;font-family:\'Nunito\',sans-serif;font-weight:900;font-size:1.25rem;line-height:1.2">’ +
+(college?‘Seniors for <em style="color:#F5A623;font-style:normal">’+college+’</em> & more’:‘Choose a senior to connect with’)+’</h2>’;
+grid.innerHTML=””;
+SENIORS_DATA.forEach((s,i)=>{
+const card=document.createElement(“div”);
+card.className=“sp-card”; card.style.animationDelay=(i*0.07)+“s”;
+const tagsHtml=s.tags.map(t=>’<span style="background:#F4F7FB;color:#1C2340;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:99px">’+t+’</span>’).join(””);
+card.innerHTML=
+‘<div class="ct"><div class="av" style="background:'+s.bg+'">’+s.emoji+’</div>’ +
+‘<div><div class="cn">’+s.name+’</div><div class="cc">’+s.college+’</div>’ +
+‘<div class="cy">’+s.year+’ · ‘+s.air+’</div></div></div>’ +
+‘<div style="padding:0 16px 10px;display:flex;flex-wrap:wrap;gap:5px">’+tagsHtml+’</div>’ +
+‘<div class="cb"><div class="cq">”’+s.quote+’”</div>’ +
+‘<div class="cm"><div class="crt">⭐ ‘+s.rating+’ (’+s.sessions+’ sessions)</div>’ +
+‘<div class="cr">’+s.price+’</div></div></div>’ +
+‘<div class="cf"><button class="cf3" onclick="openWA(\''+s.wa+'\',\''+s.name+'\')">💬 WhatsApp</button>’ +
+‘<button class="cf2" onclick="bookSenior(\''+s.name+'\',\''+s.wa+'\')">📅 Book</button></div>’;
+grid.appendChild(card);
+});
+modal.style.display=“flex”; document.body.style.overflow=“hidden”; modal.scrollTop=0;
 }
+function closeSP() { document.getElementById(“sp-modal”).style.display=“none”; document.body.style.overflow=””; }
 
-function closeSP() {
-  document.getElementById("sp-modal").style.display = "none";
-  document.body.style.overflow = "";
-}
-
-// ── RANK PREDICTOR ────────────────────────────────
-const RP_TABLE = [
-  {s:720,mn:1,mx:50},{s:710,mn:50,mx:150},{s:700,mn:150,mx:400},
-  {s:690,mn:400,mx:700},{s:680,mn:700,mx:1100},{s:670,mn:1100,mx:1700},
-  {s:660,mn:1700,mx:2600},{s:650,mn:2600,mx:3800},{s:640,mn:3800,mx:5500},
-  {s:630,mn:5500,mx:7800},{s:620,mn:7800,mx:10500},{s:610,mn:10500,mx:14000},
-  {s:600,mn:14000,mx:18500},{s:590,mn:18500,mx:24000},{s:580,mn:24000,mx:30000},
-  {s:570,mn:30000,mx:38000},{s:560,mn:38000,mx:47000},{s:550,mn:47000,mx:58000},
-  {s:540,mn:58000,mx:71000},{s:530,mn:71000,mx:86000},{s:520,mn:86000,mx:103000},
-  {s:510,mn:103000,mx:123000},{s:500,mn:123000,mx:145000},{s:490,mn:145000,mx:170000},
-  {s:480,mn:170000,mx:198000},{s:470,mn:198000,mx:230000},{s:460,mn:230000,mx:265000},
-  {s:450,mn:265000,mx:305000},{s:440,mn:305000,mx:350000},{s:430,mn:350000,mx:400000},
-  {s:420,mn:400000,mx:455000},{s:410,mn:455000,mx:515000},{s:400,mn:515000,mx:580000},
-  {s:390,mn:580000,mx:650000},{s:380,mn:650000,mx:730000},{s:370,mn:730000,mx:820000},
-  {s:360,mn:820000,mx:920000},{s:350,mn:920000,mx:1020000},{s:300,mn:1020000,mx:1200000},
-  {s:200,mn:1200000,mx:1800000},{s:100,mn:1800000,mx:2000000}
+const RP_TABLE=[
+{s:720,mn:1,mx:50},{s:710,mn:50,mx:150},{s:700,mn:150,mx:400},
+{s:690,mn:400,mx:700},{s:680,mn:700,mx:1100},{s:670,mn:1100,mx:1700},
+{s:660,mn:1700,mx:2600},{s:650,mn:2600,mx:3800},{s:640,mn:3800,mx:5500},
+{s:630,mn:5500,mx:7800},{s:620,mn:7800,mx:10500},{s:610,mn:10500,mx:14000},
+{s:600,mn:14000,mx:18500},{s:590,mn:18500,mx:24000},{s:580,mn:24000,mx:30000},
+{s:570,mn:30000,mx:38000},{s:560,mn:38000,mx:47000},{s:550,mn:47000,mx:58000},
+{s:540,mn:58000,mx:71000},{s:530,mn:71000,mx:86000},{s:520,mn:86000,mx:103000},
+{s:510,mn:103000,mx:123000},{s:500,mn:123000,mx:145000},{s:490,mn:145000,mx:170000},
+{s:480,mn:170000,mx:198000},{s:470,mn:198000,mx:230000},{s:460,mn:230000,mx:265000},
+{s:450,mn:265000,mx:305000},{s:440,mn:305000,mx:350000},{s:430,mn:350000,mx:400000},
+{s:420,mn:400000,mx:455000},{s:410,mn:455000,mx:515000},{s:400,mn:515000,mx:580000},
+{s:390,mn:580000,mx:650000},{s:380,mn:650000,mx:730000},{s:370,mn:730000,mx:820000},
+{s:360,mn:820000,mx:920000},{s:350,mn:920000,mx:1020000},{s:300,mn:1020000,mx:1200000},
+{s:200,mn:1200000,mx:1800000},{s:100,mn:1800000,mx:2000000}
 ];
-const CAT_M = {UR:1,EWS:1.02,OBC:1.35,SC:2.1,ST:2.8};
-
-function rpFmt(n) {
-  return n >= 100000 ? (n/100000).toFixed(1)+"L" : n >= 1000 ? Math.round(n/1000)+"K" : n;
+const CAT_M={UR:1,EWS:1.02,OBC:1.35,SC:2.1,ST:2.8};
+function rpFmt(n){return n>=100000?(n/100000).toFixed(1)+“L”:n>=1000?Math.round(n/1000)+“K”:n}
+function rpCalc(score,cat){
+let u=RP_TABLE[0],l=RP_TABLE[RP_TABLE.length-1];
+for(let i=0;i<RP_TABLE.length-1;i++){if(score<=RP_TABLE[i].s&&score>=RP_TABLE[i+1].s){u=RP_TABLE[i];l=RP_TABLE[i+1];break;}}
+const t=(u.s-score)/(u.s-l.s||1),m=CAT_M[cat]||1;
+return{mn:Math.round((u.mn+(l.mn-u.mn)*t)/m),mid:Math.round(((u.mn+(l.mn-u.mn)*t)+(u.mx+(l.mx-u.mx)*t))/2/m),mx:Math.round((u.mx+(l.mx-u.mx)*t)/m)};
 }
-
-function rpCalc(score, cat) {
-  let u = RP_TABLE[0], l = RP_TABLE[RP_TABLE.length-1];
-  for (let i = 0; i < RP_TABLE.length-1; i++) {
-    if (score <= RP_TABLE[i].s && score >= RP_TABLE[i+1].s) { u=RP_TABLE[i]; l=RP_TABLE[i+1]; break; }
-  }
-  const t = (u.s-score)/(u.s-l.s||1);
-  const m = CAT_M[cat] || 1;
-  return {
-    mn: Math.round((u.mn+(l.mn-u.mn)*t)/m),
-    mid: Math.round(((u.mn+(l.mn-u.mn)*t)+(u.mx+(l.mx-u.mx)*t))/2/m),
-    mx: Math.round((u.mx+(l.mx-u.mx)*t)/m)
-  };
+function rpUpdate(v){
+const pct=((v-100)/(720-100))*100;
+document.getElementById(“rp-sl”).style.background=“linear-gradient(to right,var(–t) 0%,var(–t) “+pct+”%,rgba(255,255,255,.2) “+pct+”%,rgba(255,255,255,.2) 100%)”;
+document.getElementById(“rp-disp”).innerHTML=”<em>”+v+”</em> / 720”;
 }
-
-function rpUpdate(v) {
-  const pct = ((v-100)/(720-100))*100;
-  document.getElementById("rp-sl").style.background =
-    "linear-gradient(to right,var(--t) 0%,var(--t) "+pct+"%,rgba(255,255,255,.2) "+pct+"%,rgba(255,255,255,.2) 100%)";
-  document.getElementById("rp-disp").innerHTML = "<em>"+v+"</em> / 720";
+const RP_SYS=“You are a NEET counsellor. Given a student’s predicted rank, category and state, give warm, specific college suggestions in 5-7 lines. Be honest and encouraging. List 3-4 realistic colleges. End with a tip to book a session with a senior on NEET Counselling Connect.”;
+async function rpPredict(){
+const score=parseInt(document.getElementById(“rp-sl”).value);
+const cat=document.getElementById(“rp-cat”).value;
+const state=document.getElementById(“rp-st”).value;
+const name=document.getElementById(“rp-name”).value.trim()||“there”;
+const{mn,mid,mx}=rpCalc(score,cat);
+const res=document.getElementById(“rp-res”);
+res.style.display=“block”;
+res.innerHTML=’<div class="rp-ranks"><div class="rp-rc"><div class="rp-rn">’+rpFmt(mn)+’</div><div class="rp-rl">Best Case</div></div><div class="rp-rc hl"><div class="rp-rn"><em>~’+rpFmt(mid)+’</em></div><div class="rp-rl">Expected Rank</div></div><div class="rp-rc"><div class="rp-rn">’+rpFmt(mx)+’</div><div class="rp-rl">Safe Side</div></div></div><div class="rp-ai"><div class="rp-ai-h"><div class="rp-dot"></div><div class="rp-ai-lbl">AI College Suggestions for ‘+name+’</div></div><div class="rp-ai-txt" id="rp-ai-txt"><div class="rp-dots"><div class="rp-d"></div><div class="rp-d"></div><div class="rp-d"></div></div></div></div><div class="rp-acts"><button class="rp-act rpa-g" onclick="scrollTo(\'#signup\')">📅 Find a Senior Now</button><button class="rp-act rpa-gh" onclick="rpReset()">🔄 Try Another Score</button></div>’;
+res.scrollIntoView({behavior:“smooth”,block:“nearest”});
+document.getElementById(“rp-btn”).disabled=true;
+const prompt=“Student: “+name+”\nScore: “+score+”/720\nPredicted Rank: ~“+rpFmt(mid)+” (”+rpFmt(mn)+” to “+rpFmt(mx)+”)\nCategory: “+cat+”\nState: “+state+”\n\nGive college suggestions.”;
+const data=await callAI(RP_SYS,[{role:“user”,content:prompt}],350);
+const txt=document.getElementById(“rp-ai-txt”);
+if(txt)txt.textContent=data.content[0].text;
 }
-
-const RP_SYS = "You are a NEET counsellor. Given a student's predicted rank, category and state, give warm, specific college suggestions in 5-7 lines. Be honest and encouraging. List 3-4 realistic colleges. End with a tip to book a session with a senior on NEET Counselling Connect.";
-
-async function rpPredict() {
-  const score = parseInt(document.getElementById("rp-sl").value);
-  const cat = document.getElementById("rp-cat").value;
-  const state = document.getElementById("rp-st").value;
-  const name = document.getElementById("rp-name").value.trim() || "there";
-  const {mn, mid, mx} = rpCalc(score, cat);
-
-  const res = document.getElementById("rp-res");
-  res.style.display = "block";
-  res.innerHTML =
-    '<div class="rp-ranks">' +
-      '<div class="rp-rc"><div class="rp-rn">'+rpFmt(mn)+'</div><div class="rp-rl">Best Case</div></div>' +
-      '<div class="rp-rc hl"><div class="rp-rn"><em>~'+rpFmt(mid)+'</em></div><div class="rp-rl">Expected Rank</div></div>' +
-      '<div class="rp-rc"><div class="rp-rn">'+rpFmt(mx)+'</div><div class="rp-rl">Safe Side</div></div>' +
-    '</div>' +
-    '<div class="rp-ai">' +
-      '<div class="rp-ai-h"><div class="rp-dot"></div><div class="rp-ai-lbl">AI College Suggestions for '+name+'</div></div>' +
-      '<div class="rp-ai-txt" id="rp-ai-txt"><div class="rp-dots"><div class="rp-d"></div><div class="rp-d"></div><div class="rp-d"></div></div></div>' +
-    '</div>' +
-    '<div class="rp-acts">' +
-      '<button class="rp-act rpa-g" onclick="scrollTo(\'#signup\')">📅 Find a Senior Now</button>' +
-      '<button class="rp-act rpa-gh" onclick="rpReset()">🔄 Try Another Score</button>' +
-    '</div>';
-
-  res.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  document.getElementById("rp-btn").disabled = true;
-
-  const prompt = "Student: "+name+"\nScore: "+score+"/720\nPredicted Rank: ~"+rpFmt(mid)+" ("+rpFmt(mn)+" to "+rpFmt(mx)+")\nCategory: "+cat+"\nState: "+state+"\n\nGive college suggestions.";
-  const data = await callAI(RP_SYS, [{role:"user",content:prompt}], 350);
-  const txt = document.getElementById("rp-ai-txt");
-  if (txt) txt.textContent = data.content[0].text;
-}
-
-function rpReset() {
-  document.getElementById("rp-res").style.display = "none";
-  document.getElementById("rp-btn").disabled = false;
-}
-
-// Init slider
+function rpReset(){document.getElementById(“rp-res”).style.display=“none”;document.getElementById(“rp-btn”).disabled=false;}
 rpUpdate(396);
 
-// ── HOSTELBOT ────────────────────────────────────
-const HB_SYS = "You are HostelBot, a warm friendly AI assistant for NEET Counselling Connect. You ONLY answer questions about hostel and campus life at Indian medical colleges. Be friendly like a helpful senior, use emojis, be honest (pros AND cons), keep answers short (2-4 sentences). If asked anything outside hostel/campus life, say you only cover hostel topics and suggest booking a session with a senior.";
-const HB_QUICK = ["How's AIIMS Delhi hostel?","Is mess food good in govt colleges?","Is it safe for girls?","Monthly hostel cost?","Do hostels have good WiFi?","Single or shared rooms at JIPMER?"];
-
-let hbOpen = false, hbLoading = false;
-let hbMsgs = [{ role:"assistant", content:"Hey! I'm HostelBot!\n\nAsk me anything about hostel life, mess food, room quality or safety at any Indian medical college!" }];
-
-function hbRender() {
-  const box = document.getElementById("hb-msgs");
-  if (!box) return;
-  box.innerHTML = "";
-
-  hbMsgs.forEach(m => {
-    const row = document.createElement("div");
-    row.className = "hb-rw" + (m.role==="user" ? " u" : "");
-    const mav = document.createElement("div");
-    mav.className = "hb-mav";
-    mav.style.background = m.role === "user" ? "linear-gradient(135deg,#F5A623,#e8920e)" : "#0D1B4B";
-    mav.textContent = m.role === "user" ? "U" : "H";
-    const bub = document.createElement("div");
-    bub.className = "hb-bub " + (m.role==="user" ? "usr" : "bot");
-    bub.textContent = m.content;
-    if (m.role === "assistant") { row.appendChild(mav); row.appendChild(bub); }
-    else { row.appendChild(bub); row.appendChild(mav); }
-    box.appendChild(row);
-  });
-
-  if (hbLoading) {
-    const row = document.createElement("div");
-    row.className = "hb-rw";
-    const mav = document.createElement("div");
-    mav.className = "hb-mav"; mav.style.background = "#0D1B4B"; mav.textContent = "H";
-    const dt = document.createElement("div");
-    dt.className = "hb-dt";
-    dt.innerHTML = '<div class="hb-d"></div><div class="hb-d"></div><div class="hb-d"></div>';
-    row.appendChild(mav); row.appendChild(dt);
-    box.appendChild(row);
-  }
-
-  if (hbMsgs.length === 1 && !hbLoading) {
-    const chips = document.createElement("div");
-    chips.className = "hb-chips";
-    chips.innerHTML = '<div class="hb-cl">Try asking</div><div class="hb-cw">' +
-      HB_QUICK.map(q => '<button class="hb-chip" onclick="hbSend(\'' + q.replace(/'/g,"\\'") + '\')">' + q + '</button>').join("") +
-    '</div>';
-    box.appendChild(chips);
-  }
-  box.scrollTop = box.scrollHeight;
-}
-
-async function hbSend(text) {
-  const inp = document.getElementById("hb-in");
-  const msg = (text || inp.value).trim();
-  if (!msg || hbLoading) return;
-  inp.value = "";
-  document.getElementById("hb-sd").disabled = true;
-  hbMsgs.push({ role:"user", content:msg });
-  hbLoading = true; hbRender();
-  const data = await callAI(HB_SYS, hbMsgs, 400);
-  hbMsgs.push({ role:"assistant", content:data.content[0].text });
-  hbLoading = false; hbRender();
-  inp.focus();
-}
-
-function hbKey(e) { if (e.key==="Enter" && !e.shiftKey) { e.preventDefault(); hbSend(); } }
-
-document.getElementById("hb-in").addEventListener("input", function() {
-  document.getElementById("hb-sd").disabled = !this.value.trim();
+const HB_SYS=“You are HostelBot, a warm friendly AI assistant for NEET Counselling Connect. You ONLY answer questions about hostel and campus life at Indian medical colleges. Be friendly like a helpful senior, use emojis, be honest (pros AND cons), keep answers short (2-4 sentences). If asked anything outside hostel/campus life, say you only cover hostel topics and suggest booking a session with a senior.”;
+const HB_QUICK=[“How’s AIIMS Delhi hostel?”,“Is mess food good in govt colleges?”,“Is it safe for girls?”,“Monthly hostel cost?”,“Do hostels have good WiFi?”,“Single or shared rooms at JIPMER?”];
+let hbOpen=false,hbLoading=false;
+let hbMsgs=[{role:“assistant”,content:“Hey! I’m HostelBot!\n\nAsk me anything about hostel life, mess food, room quality or safety at any Indian medical college!”}];
+function hbRender(){
+const box=document.getElementById(“hb-msgs”);
+if(!box)return;
+box.innerHTML=””;
+hbMsgs.forEach(m=>{
+const row=document.createElement(“div”);
+row.className=“hb-rw”+(m.role===“user”?” u”:””);
+const mav=document.createElement(“div”);
+mav.className=“hb-mav”;
+mav.style.background=m.role===“user”?“linear-gradient(135deg,#F5A623,#e8920e)”:”#0D1B4B”;
+mav.textContent=m.role===“user”?“U”:“H”;
+const bub=document.createElement(“div”);
+bub.className=“hb-bub “+(m.role===“user”?“usr”:“bot”);
+bub.textContent=m.content;
+if(m.role===“assistant”){row.appendChild(mav);row.appendChild(bub);}
+else{row.appendChild(bub);row.appendChild(mav);}
+box.appendChild(row);
 });
-
-function hbToggle() {
-  hbOpen = !hbOpen;
-  const pop = document.getElementById("hb-pop");
-  const bbl = document.getElementById("hb-bbl");
-  const bdg = document.getElementById("hb-bdg");
-  pop.className = hbOpen ? "open" : "closed";
-  bbl.innerHTML = (hbOpen ? "✕" : "H") + ((!hbOpen && bdg) ? '<div class="hb-badge" id="hb-bdg">1</div>' : '<div class="hb-badge" id="hb-bdg" style="display:none">1</div>');
-  if (hbOpen) { hbRender(); setTimeout(() => document.getElementById("hb-in").focus(), 300); }
+if(hbLoading){
+const row=document.createElement(“div”);row.className=“hb-rw”;
+const mav=document.createElement(“div”);mav.className=“hb-mav”;mav.style.background=”#0D1B4B”;mav.textContent=“H”;
+const dt=document.createElement(“div”);dt.className=“hb-dt”;
+dt.innerHTML=’<div class="hb-d"></div><div class="hb-d"></div><div class="hb-d"></div>’;
+row.appendChild(mav);row.appendChild(dt);box.appendChild(row);
 }
-
-// Shake bubble every 12s when closed
-setInterval(() => {
-  if (!hbOpen) {
-    const b = document.getElementById("hb-bbl");
-    if (b) {
-      b.style.animation = "none";
-      b.style.transform = "rotate(-8deg)";
-      setTimeout(() => { b.style.transform = "rotate(8deg)"; }, 100);
-      setTimeout(() => { b.style.transform = ""; b.style.animation = "hbpls 3s ease-in-out infinite"; }, 500);
-    }
-  }
-}, 12000);
-
-// ── ADMIN ─────────────────────────────────────────
-function showLogin() {
-  document.getElementById("login-modal").classList.add("show");
-  setTimeout(() => document.getElementById("login-pw").focus(), 100);
+if(hbMsgs.length===1){
+const chips=document.createElement(“div”);chips.className=“hb-chips”;
+chips.innerHTML=’<div class="hb-cl">Quick questions</div><div class="hb-cw">’+
+HB_QUICK.map(q=>’<button class="hb-chip" onclick="hbChip(this,\''+q+'\')">’+q+’</button>’).join(””)+’</div>’;
+box.appendChild(chips);
 }
-
-function closeLogin() {
-  document.getElementById("login-modal").classList.remove("show");
-  document.getElementById("login-pw").value = "";
-  document.getElementById("login-err").style.display = "none";
+box.scrollTop=box.scrollHeight;
 }
-
-function doLogin() {
-  const pw = document.getElementById("login-pw").value;
-  if (pw === ADMIN_PW) {
-    closeLogin();
-    openAdmin();
-  } else {
-    document.getElementById("login-err").style.display = "block";
-    document.getElementById("login-pw").value = "";
-  }
+function hbToggle(){
+hbOpen=!hbOpen;
+document.getElementById(“hb-pop”).className=hbOpen?“open”:“closed”;
+document.getElementById(“hb-bdg”).style.display=“none”;
+if(hbOpen){hbRender();setTimeout(()=>document.getElementById(“hb-in”).focus(),300);}
 }
-
-function openAdmin() {
-  const modal = document.getElementById("admin-modal");
-  modal.classList.add("show");
-  document.body.style.overflow = "hidden";
-  renderAdmStats();
-  admTab("students", document.querySelector(".adm-tab.on") || document.querySelector(".adm-tab"));
+function hbChip(el,q){el.style.opacity=“0.5”;el.style.pointerEvents=“none”;document.getElementById(“hb-in”).value=q;hbSend();}
+function hbKey(e){
+const inp=document.getElementById(“hb-in”);
+document.getElementById(“hb-sd”).disabled=!inp.value.trim();
+if(e.key===“Enter”&&!e.shiftKey){e.preventDefault();hbSend();}
 }
-
-function closeAdmin() {
-  document.getElementById("admin-modal").classList.remove("show");
-  document.body.style.overflow = "";
+async function hbSend(){
+const inp=document.getElementById(“hb-in”);
+const txt=inp.value.trim();
+if(!txt||hbLoading)return;
+inp.value=””;document.getElementById(“hb-sd”).disabled=true;
+hbMsgs.push({role:“user”,content:txt});
+hbLoading=true;hbRender();
+const data=await callAI(HB_SYS,hbMsgs.slice(-8),250);
+hbLoading=false;
+hbMsgs.push({role:“assistant”,content:data.content[0].text});
+hbRender();
 }
-
-function renderAdmStats() {
-  const students = getResponses("student");
-  const seniors = getResponses("senior");
-  const row = document.getElementById("adm-stats-row");
-  row.innerHTML =
-    '<div class="adm-stat"><div class="n"><em>'+students.length+'</em></div><div class="l">Total Students</div></div>' +
-    '<div class="adm-stat"><div class="n"><em>'+seniors.length+'</em></div><div class="l">Total Seniors</div></div>' +
-    '<div class="adm-stat"><div class="n"><em>'+(students.length+seniors.length)+'</em></div><div class="l">Total Signups</div></div>' +
-    '<div class="adm-stat"><div class="n"><em>'+Math.max(0,students.length-seniors.length)+'</em></div><div class="l">Unmatched Students</div></div>';
-}
-
-function admTab(type, btn) {
-  document.querySelectorAll(".adm-tab").forEach(b => b.classList.remove("on"));
-  if (btn) btn.classList.add("on");
-  else {
-    const tabs = document.querySelectorAll(".adm-tab");
-    if (tabs[0]) tabs[0].classList.add("on");
-  }
-  const data = getResponses(type);
-  const content = document.getElementById("adm-content");
-
-  if (data.length === 0) {
-    content.innerHTML = '<div class="adm-empty">No ' + type + ' registered yet. Share your website to get started! 🚀</div>';
-    return;
-  }
-
-  const isStudent = type === "student";
-  let html = '<div style="overflow-x:auto"><table class="adm-table"><thead><tr>';
-  if (isStudent) {
-    html += '<th>#</th><th>Name</th><th>WhatsApp</th><th>Score</th><th>Target College</th><th>Category</th><th>Help Needed</th><th>Registered</th><th>Action</th>';
-  } else {
-    html += '<th>#</th><th>Name</th><th>WhatsApp</th><th>College</th><th>Year</th><th>AIR</th><th>UPI</th><th>Can Help With</th><th>Registered</th><th>Action</th>';
-  }
-  html += '</tr></thead><tbody>';
-
-  data.forEach((d, i) => {
-    const waMsg = isStudent
-      ? encodeURIComponent("Hi " + d.name + "! You signed up on NEET Counselling Connect. We've found a senior for you! Here are the details...")
-      : encodeURIComponent("Hi " + d.name + "! Welcome to NEET Counselling Connect. Your profile has been verified! You can start receiving sessions.");
-    html += '<tr>';
-    if (isStudent) {
-      html += '<td style="color:rgba(255,255,255,.4)">'+(i+1)+'</td>' +
-        '<td style="font-weight:700">'+d.name+'</td>' +
-        '<td>'+d.wa+'</td>' +
-        '<td>'+( d.score||'-')+'</td>' +
-        '<td>'+d.college+'</td>' +
-        '<td>'+( d.category||'-')+'</td>' +
-        '<td style="font-size:.76rem;color:rgba(255,255,255,.6)">'+d.help+'</td>' +
-        '<td style="font-size:.72rem;color:rgba(255,255,255,.4)">'+d.timestamp+'</td>' +
-        '<td><a href="https://wa.me/'+d.wa.replace(/\D/g,'')+'?text='+waMsg+'" target="_blank"><button class="adm-wa">💬 WhatsApp</button></a></td>';
-    } else {
-      html += '<td style="color:rgba(255,255,255,.4)">'+(i+1)+'</td>' +
-        '<td style="font-weight:700">'+d.name+'</td>' +
-        '<td>'+d.wa+'</td>' +
-        '<td>'+d.college+'</td>' +
-        '<td>'+d.year+'</td>' +
-        '<td>'+( d.air||'-')+'</td>' +
-        '<td style="font-size:.76rem">'+( d.upi||'-')+'</td>' +
-        '<td style="font-size:.76rem;color:rgba(255,255,255,.6)">'+d.help+'</td>' +
-        '<td style="font-size:.72rem;color:rgba(255,255,255,.4)">'+d.timestamp+'</td>' +
-        '<td><a href="https://wa.me/'+d.wa.replace(/\D/g,'')+'?text='+waMsg+'" target="_blank"><button class="adm-wa">💬 WhatsApp</button></a></td>';
-    }
-    html += '</tr>';
-  });
-
-  html += '</tbody></table></div>';
-  html += '<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">' +
-    '<button onclick="clearData(\'' + type + '\')" style="background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.3);color:#FCA5A5;font-family:\'Nunito\',sans-serif;font-weight:700;font-size:.78rem;padding:8px 14px;border-radius:99px;cursor:pointer">🗑️ Clear All ' + (isStudent ? "Students" : "Seniors") + ' Data</button>' +
-  '</div>';
-  content.innerHTML = html;
-}
-
-function clearData(type) {
-  if (confirm("Are you sure? This will delete all " + type + " data permanently!")) {
-    localStorage.removeItem(type === "student" ? "nc_students" : "nc_seniors");
-    openAdmin();
-  }
-}
-
-// Enter key for login
-document.getElementById("login-pw").addEventListener("keydown", e => {
-  if (e.key === "Enter") doLogin();
-});
-
-// ── Hide float buttons near signup ────────────────
-const foObs = new IntersectionObserver(e => {
-  const wa = document.querySelector(".float-wa");
-  const sr = document.querySelector(".float-sr");
-  const hide = e[0].isIntersecting;
-  if (wa) { wa.style.opacity = hide ? "0" : "1"; wa.style.pointerEvents = hide ? "none" : "auto"; }
-  if (sr) { sr.style.opacity = hide ? "0" : "1"; sr.style.pointerEvents = hide ? "none" : "auto"; }
-}, { threshold: 0.15 });
-foObs.observe(document.getElementById("signup"));
 </script>
 
 </body>
