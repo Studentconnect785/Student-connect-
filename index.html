@@ -222,8 +222,7 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 .hb-chips{margin-top:3px}
 .hb-cl{font-size:9px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
 .hb-cw{display:flex;flex-wrap:wrap;gap:5px}
-.hb-chip{background:#fff;border:1.5px solid #E5E7EB;border-radius:99px;padding:
-  4px 9px;font-size:10px;font-weight:700;color:#0D1B4B;cursor:pointer;font-family:‘Nunito’,sans-serif;transition:.15s}
+.hb-chip{background:#fff;border:1.5px solid #E5E7EB;border-radius:99px;padding:4px 9px;font-size:10px;font-weight:700;color:#0D1B4B;cursor:pointer;font-family:‘Nunito’,sans-serif;transition:.15s}
 .hb-chip:hover{border-color:var(–t);color:var(–t);background:#E6F7F6}
 .hb-ir{padding:8px 10px 10px;background:#fff;border-top:1px solid #F0F0F0;display:flex;gap:6px;align-items:flex-end;flex-shrink:0}
 #hb-in{flex:1;border:1.5px solid #E5E7EB;border-radius:10px;padding:8px 10px;font-size:12px;font-family:‘Nunito’,sans-serif;resize:none;outline:none;line-height:1.5;color:#1C2340;background:#F8FAFB;max-height:60px;overflow-y:auto;transition:border .18s}
@@ -548,8 +547,7 @@ headers: { ‘Content-Type’: ‘application/json’ },
 body: JSON.stringify({ table, data })
 });
 const result = await res.json();
-return result.success ? { error: null } : { error: result.error };
-  } catch(e) {
+return result.success ? { error: null } : { error: result.error };} catch(e) {
 return { error: e.message };
 }
 }
