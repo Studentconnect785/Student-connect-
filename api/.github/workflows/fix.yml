@@ -1,0 +1,19 @@
+name: Fix Site
+on: workflow_dispatch
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          cat > fix.py << 'EOF'
+          with open('index.html', 'r') as f:
+              c = f.read()
+          c = c.replace('.fi{opacity:0;transform:translateY(18px)', '.fi{opacity:1;transform:translateY(0px)')
+          with open('index.html', 'w') as f:
+              f.write(c)
+          EOF
+          python3 fix.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Fix opacity
