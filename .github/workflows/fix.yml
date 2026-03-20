@@ -3,14 +3,17 @@ on: workflow_dispatch
 jobs:
   fix:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - name: Fix opacity
+      - name: Fix and commit
         run: |
           sed -i 's/opacity:0/opacity:1/g' index.html
           sed -i 's/translateY(18px)/translateY(0px)/g' index.html
-          git diff index.html
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Fix blank sections
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add index.html
+          git diff --staged
+          git commit -m "Fix blank sections" || echo "Nothing to commit"
+          git push
