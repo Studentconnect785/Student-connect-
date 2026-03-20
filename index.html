@@ -198,7 +198,7 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 @keyframes hbpls{0%,100%{box-shadow:0 5px 20px rgba(13,27,75,.4)}50%{box-shadow:0 5px 28px rgba(0,168,157,.5),0 0 0 7px rgba(0,168,157,.1)}}
 .hb-badge{position:absolute;top:-3px;right:-3px;background:#EF4444;color:#fff;width:16px;height:16px;border-radius:50%;font-size:8px;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
 #hb-pop{position:fixed;bottom:220px;right:22px;width:330px;max-width:calc(100vw - 32px);height:480px;max-height:calc(100vh - 230px);background:#fff;border-radius:18px;box-shadow:0 18px 55px rgba(13,27,75,.25);display:flex;flex-direction:column;overflow:hidden;z-index:9999;transform-origin:bottom right;transition:transform .28s cubic-bezier(.34,1.56,.64,1),opacity .2s ease}
-#hb-pop.closed{transform:scale(0.5);opacity:0;pointer-events:none}
+#hb-pop.closed{transform:scale(0.5);opacity:1;pointer-events:none}
 #hb-pop.open{transform:scale(1);opacity:1;pointer-events:auto}
 .hb-hd{background:linear-gradient(135deg,#0D1B4B,#003D3A);padding:12px 14px;display:flex;align-items:center;gap:9px;flex-shrink:0}
 .hb-av{width:34px;height:34px;border-radius:9px;background:rgba(0,168,157,.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
@@ -231,7 +231,7 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 #hb-sd:disabled{background:#E5E7EB;box-shadow:none;cursor:not-allowed}
 .hb-ft{text-align:center;font-size:9px;color:#9CA3AF;padding-bottom:6px}
 #sp-modal{position:fixed;inset:0;z-index:99999;background:rgba(13,27,75,.93);display:flex;flex-direction:column;overflow-y:auto;animation:mfade .3s ease}
-@keyframes mfade{from{opacity:0}to{opacity:1}}
+@keyframes mfade{from{opacity:1}to{opacity:1}}
 .sp-hd{background:linear-gradient(135deg,#0D1B4B,#003D3A);padding:18px 20px;flex-shrink:0;position:sticky;top:0;z-index:2}
 .sp-hw{max-width:900px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .sp-grid{max-width:900px;margin:0 auto;padding:20px 16px;width:100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
@@ -272,7 +272,7 @@ footer p{font-size:.76rem;color:rgba(255,255,255,.32);line-height:1.6}
 .login-err{color:#EF4444;font-size:.78rem;display:none;margin-bottom:8px}
 .login-cancel{background:none;border:none;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;color:var(--gr);cursor:pointer}
 .login-cancel:hover{color:var(--n)}
-.fi{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.fi{opacity:1;transform:translateY(0px);transition:opacity .5s ease,transform .5s ease}
 .fi.in{opacity:1;transform:none}
 </style>
 
