@@ -7,12 +7,20 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
+      - name: Check file
+        run: |
+          echo "Current lines: $(wc -l < index.html)"
+          echo "Has old GK key: $(grep -c 'AIzaSyDFh7ui98A0' index.html || echo 0)"
+          echo "Has dbInsert: $(grep -c 'dbInsert' index.html || echo 0)"
+          echo "Has showLogin: $(grep -c 'showLogin' index.html || echo 0)"
       - name: Replace index.html
         run: |
-          curl -L "https://gist.githubusercontent.com/Studentconnect785/d625713328d8a33b71d3f7dacc45730d/raw/1cf4cb67440ad80c33a5afce3b2bfa8de78cd93f/index.html" -o index.html
-          echo "Lines: $(wc -l < index.html)"
+          curl -fsSL "https://gist.githubusercontent.com/Studentconnect785/d625713328d8a33b71d3f7dacc45730d/raw/1cf4cb67440ad80c33a5afce3b2bfa8de78cd93f/index.html" -o new_index.html
+          echo "Downloaded lines: $(wc -l < new_index.html)"
+          echo "Downloaded size: $(wc -c < new_index.html)"
+          mv new_index.html index.html
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add index.html
-          git commit -m "Fix index.html" || echo "Nothing to commit"
+          git commit -m "Replace index.html" || echo "Nothing to commit"
           git push
