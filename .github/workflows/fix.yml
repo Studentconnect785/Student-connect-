@@ -7,13 +7,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
-      - name: Fix and commit
+      - name: Replace index.html
         run: |
-          sed -i 's/opacity:0/opacity:1/g' index.html
-          sed -i 's/translateY(18px)/translateY(0px)/g' index.html
+          curl -L "https://gist.githubusercontent.com/Studentconnect785/0d3788bee8cc377023de84dcad6b4080/raw/ca68d5b4ad3031fe0d5d6f527c7c932bebe9a138/index.html" -o index.html
+          echo "File size: $(wc -c < index.html)"
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add index.html
-          git diff --staged
-          git commit -m "Fix blank sections" || echo "Nothing to commit"
+          git commit -m "Replace index.html with fixed version"
           git push
